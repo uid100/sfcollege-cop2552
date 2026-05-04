@@ -1,0 +1,16 @@
+[
+    { "id": "LO #1", "objective": "Write and execute basic Java programs that utilize sequential processing, variables, operators, and input/output functions." },
+    { "id": "LO #2", "objective": "Understand the program development cycle" },
+    { "id": "LO #3", "objective": "Understand data types, variable scope, and file access" },
+    { "id": "LO #4", "objective": "Recognize the properties and behaviors of classes and objects" },
+    { "id": "LO #5", "objective": "Use the various types of selection structures" },
+    { "id": "LO #6", "objective": "Use the various types of repetition structures" },
+    { "id": "LO #7", "objective": "Use arrays and arraylists to store character and numeric data" },
+    { "id": "LO #8", "objective": "Understand how to create and use functions" },
+    { "id": "LO #9", "objective": "Understand how sequential data files are opened, read to and from, deleted, and merged" },
+    { "id": "LO #10", "objective": "Understand the basic concepts of an object-oriented languages including inheritance, encapsulation, and polymorphism" },
+    { "id": "LO #11", "objective": "Comprehend and use wrapper classes" },
+    { "id": "LO #12", "objective": "Know proper use of exception handling" },
+    { "id": "LO #13", "objective": "Understand and use JavaFX to create GUI-based applications" },
+    { "id": "LO #14", "objective": "Utilize a relational database within a Java application" }
+]

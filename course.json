@@ -1,0 +1,87 @@
+{
+    "college": "sfcollege",
+    "instructor": "dan-sullivan",
+    "courseNumber": "COP 2552",
+    "courseTitle": "Object-Oriented Programming 2",
+    "units": 3,
+    "coverImage": "/course-content/images/programmer.jpg",
+    "description": [
+        "(from the catalog:)",
+      "This course is a continuation of COP 2551.",
+      "It covers advanced object-oriented programming concepts, including inheritance, polymorphism, and exception handling.",
+      "Students will learn to use the Java programming language to develop software for desktop and web applications.",
+      "Topics of study include the fundamentals of the language, using lists, dictionaries, and creating functions and classes.",
+      "Each module contains lecture notes, assignments, and other resources.",
+      "There are coding demonstrations and exercises every week to practice the content.",
+      "Content in each module will be augmented by the required textbook, as well as additional content."
+    ],
+    "prerequisites": "CGS 1821 and COP 2551 with a grade of C or better",
+    "defaultSection": "su2026",
+    "contact": {
+        "instructorEmail": "daniel.sullivan@sfcollege.edu",
+        "officeHours": {
+            "location": "Remote",
+            "schedule": "weekly Wed 12:00P - 2:00P EST",
+            "label": "Wed 12P - 2P",
+            "zoomLink": "https://sfcollege.zoom.us/j/92446820828?pwd=NHNrYlNaZTBwUXk3Zy9BWnEzYzEydz09"
+        },
+        "discordLink": {
+            "label": "Discord: Code Bytes",
+            "url": "https://discord.gg/MpHjV4qgxZ"
+        },
+        "about": "preferred method of contact is via email. I will respond to emails within 24 hours on weekdays. Published office hours are times when I will be available on Zoom for real-time communication. If you need to meet at a different time, please email me to schedule an appointment.\nDiscord channels are also available for anytime communication with me and your classmates."
+    },
+    "outcomes": "outcomes/clo.json",
+    "objectives": "outcomes/slo.json",
+    "textbook": "materials/textbook.json",
+    "content": {
+        "modules": {
+            "00-implementation-notes": {
+                "title": "Module 00 - notes only",
+                "pages": {
+                    "implementation-note": { "1": "use *resource* for absolute (external) links", "2": "use *source* for course-repo relative (internal) links, courseBase + source" }
+                } },
+            "1": { "title": "Chapter 2: Java Fundamentals" },
+            "2": { "title": "Chapter 3: A First Look at Classes and Objects" },
+            "3": { "title": "Chapter 4: Decision Structures" },
+            "4": { "title": "Chapter 5: Loops and Files" },
+            "5": { "title": "Chapter 6: A Second Look at Classes" },
+            "6": { "title": "Chapter 7&amp;8: Arrays and the ArrayList Class and Text Processing and Wrapper Classes" },
+            "7": { "title": "Chapter 9: Inheritance" },
+            "8": { "title": "Chapter 10: Exceptions and Advanced File I/O" },
+            "9": { "title": "Chapter 11: JavaFX: GUI Programming and Basic Controls" },
+            "10": { "title": "Chapter 12: JavaFX: Advanced Controls" },
+            "11": { "title": "Chapter 13: Recursion" },
+            "12": { "title": "Chapter 15: Databases" },
+            "13": { "title": "Wrap-up and Final Exams" },
+            "99": {
+                "title": "Module 99 - Additional Resources",
+                "pages": {
+                    "late-policy": { 
+                        "title": "Late Policy", 
+                        "type": "page", 
+                        "resource": "https://uid100.github.io/edu-core/shared/policies/late-policy.html"
+                    },
+                    "online": { 
+                        "title": "Online Classes", 
+                        "type": "page", 
+                        "resource": 
+                        "https://uid100.github.io/edu-core/shared/policies/online-classes.html"
+                    }
+                }
+            }
+        }
+    },
+    "templates": {
+        "syllabus": "core:syllabus",
+        "syllabus(override)": "syllabus/syllabus.html",
+        "policies": "policies/policies.html"
+    },
+    "materials": {
+        "required": "materials/required.html",
+        "recommended": "materials/recommended.html"
+    },
+    "gradingDetails": "grading/grading-details.html",
+    "accommodations": "accommodations/accommodations.html",
+    "topicOutline": "outline/outline.html"
+}

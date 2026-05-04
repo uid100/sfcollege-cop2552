@@ -1,0 +1,14 @@
+[
+    {
+    "id": "CLO #1",
+    "outcome": "Understand the fundamentals of programming with classes and objects."
+    },
+    {
+    "id": "CLO #2",
+    "outcome": "Write syntactically and semantically correct Java programs."
+    },
+    {
+    "id": "CLO #3",
+    "outcome": "Analyze program requirements and design solutions using OOP principles."
+    }
+]
