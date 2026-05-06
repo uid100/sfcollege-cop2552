@@ -36,24 +36,98 @@
     "textbook": "materials/textbook.json",
     "content": {
         "modules": {
-            "00-implementation-notes": {
-                "title": "Module 00 - notes only",
+            "01": { 
+                "title": "Chapter 2: Java Fundamentals",
                 "pages": {
-                    "implementation-note": { "1": "use *resource* for absolute (external) links", "2": "use *source* for course-repo relative (internal) links, courseBase + source" }
-                } },
-            "1": { "title": "Chapter 2: Java Fundamentals" },
-            "2": { "title": "Chapter 3: A First Look at Classes and Objects" },
-            "3": { "title": "Chapter 4: Decision Structures" },
-            "4": { "title": "Chapter 5: Loops and Files" },
-            "5": { "title": "Chapter 6: A Second Look at Classes" },
-            "6": { "title": "Chapter 7&amp;8: Arrays and the ArrayList Class and Text Processing and Wrapper Classes" },
-            "7": { "title": "Chapter 9: Inheritance" },
-            "8": { "title": "Chapter 10: Exceptions and Advanced File I/O" },
-            "9": { "title": "Chapter 11: JavaFX: GUI Programming and Basic Controls" },
-            "10": { "title": "Chapter 12: JavaFX: Advanced Controls" },
-            "11": { "title": "Chapter 13: Recursion" },
-            "12": { "title": "Chapter 15: Databases" },
-            "13": { "title": "Wrap-up and Final Exams" },
+                    "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module1.html"},
+                    "end": {"title": "End Module 1: Java Fundamentals","type": "content","source": "content/end-module.html"}
+                }
+            },
+            "02": { 
+                "title": "Chapter 3: A First Look at Classes and Objects",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module2.html"},
+                    "end": {"title": "End Module 2: Classes and Objects","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "03": { 
+                "title": "Chapter 4: Decision Structures",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module3.html"},
+                    "end": {"title": "End Module 3: Decision Structures","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "04": { 
+                "title": "Chapter 5: Loops and Files",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module4.html"},
+                    "end": {"title": "End Module 4: Loops and Files","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "05": { 
+                "title": "Chapter 6: A Second Look at Classes",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module5.html"},
+                    "end": {"title": "End Module 5: More about Classes","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "06": { 
+                "title": "Chapter 7&amp;8: Arrays and the ArrayList Class and Text Processing and Wrapper Classes",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module6.html"},
+                    "end": {"title": "End Module 6: Arrays and the ArrayLists, and Text Processing and Wrappers","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "07": { 
+                "title": "Chapter 9: Inheritance",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module7.html"},
+                    "end": {"title": "End Module 7: Inheritance","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "08": { 
+                "title": "Chapter 10: Exceptions and Advanced File I/O",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module8.html"},
+                    "end": {"title": "End Module 8: Exceptions and File I/O","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "09": { 
+                "title": "Chapter 11: JavaFX: GUI Programming and Basic Controls",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module9.html"},
+                    "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "10": { 
+                "title": "Chapter 12: JavaFX: Advanced Controls",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module10.html"},
+                    "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "11": { 
+                "title": "Chapter 13: Recursion",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module11.html"},
+                    "end": {"title": "End Module 11: Recursion","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "12": { 
+                "title": "Chapter 15: Databases",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module12.html"},
+                    "end": {"title": "End Module 12: Databases","type": "content","source": "content/end-module.html"}
+                } 
+            },
+            "13": { 
+                "title": "Wrap-up and Final Exams",
+                "pages": {
+                    "overview": {"title": "Module Overview","type": "content","source": "content/module13.html"},
+                    "end": {"title": "End Module 13: Wrap-up","type": "content","source": "content/end-module.html"}
+                } 
+            },
             "99": {
                 "title": "Module 99 - Additional Resources",
                 "pages": {
