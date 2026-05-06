@@ -41,6 +41,7 @@
                 "pages": {
                     "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
                     "overview": {"title": "Module Overview","type": "content","source": "content/module1.html"},
+                    "ack": {"title": "Syllabus Acknowledgement","type": "content","source": "content/ack.html"},
                     "end": {"title": "End Module 1: Java Fundamentals","type": "content","source": "content/end-module.html"}
                 }
             },
