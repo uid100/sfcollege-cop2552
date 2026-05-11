@@ -40,8 +40,11 @@
                 "title": "Chapter 2: Java Fundamentals",
                 "pages": {
                     "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module1.html"},
-                    "ack": {"title": "Syllabus Acknowledgement","type": "content","source": "content/ack.html"},
+                    "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
+                    "chapter-notes": {"title": "Chapter Notes","type": "content","source": "content/01/chapter-notes.html"},
+                    "code": {"title": "Code Demonstrations","type": "content","source": "content/01/sample-code.html"},
+                    "ex": {"title": "Exercise: Eclipse and JUnit","type": "content","source": "content/01/ex-eclipse.html"},
+                    "ack": {"title": "Syllabus Acknowledgement","type": "content","source": "content/01/ack.html"},
                     "end": {"title": "End Module 1: Java Fundamentals","type": "content","source": "content/end-module.html"}
                 }
             },
