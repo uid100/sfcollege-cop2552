@@ -1,0 +1,117 @@
+<div id="getting_started">
+    <h3>Dive in!</h3>
+    <p>We will be writing Java programs using Eclipse. This means you will be completing your readings and assigned projects outside of the classroom. I encourage you to work independently, but if you find you are spinning your wheels or if something does not make sense, please contact me. I am available to help by email or a Zoom session. I want to see you succeed!</p>
+    <p>Chances are, you've chosen this path and have come this far to the advanced level programming course, and you have discovered through frustration and determination, that solving challenges through writing code really can be fun and rewarding, and you should be ready to get started.</p>
+    <p>Like other courses you've taken thus far, there are downloads and other necessary preparations that will be needed, but you should be ready to jump right in. Download what is needed as soon as possible (today is a great day to do this!) and begin writing your first Java program using Eclipse.</p>
+    <p>It is expected that you are familiar with the programming structures (sequence, decision, and repetition) along with the basics of object-oriented programming (classes and objects, public vs private, etc...). While the Java programming language may be new to you, you will find these structures to be very similar in nature to the other C-based languages you have studied thus far. That is, C++ and C#. We will rapidly review over this material, so that we may be able to move into new in-depth, crucial topics.</p>
+    <p>This is not an occasion for a <em>fake-it-until-you-make-it</em> attitude. Use the code samples and take the time to understand them. Be honest with yourself. If there are concepts that you struggle with, identify them and find resources to sharpen those skills. Like learning any skill, strength and comfort only comes from immersion and repetition.</p>
+    <p>&nbsp;</p>
+</div>
+<div id="Eclipse">
+    <h3>Using Eclipse</h3>
+    <p>The next thing you need to do is learn to use <strong>Eclipse</strong>. If you haven't already, download and install the Eclipse IDE. There are instructions in Module 0, but these are likely outdated. I'll add a refresh to my TODO: list (for Summer 2022), but I don't expect students to have trouble with this step.</p>
+    <p>I am running Version 2022-03 on Windows 11, which is a current or recent release as of this writing. I do not have local access to the computers in the ITE lab, but if there is a version conflict with what is installed there, please let me know and I will work to get it resolved.</p>
+    <p>Some thoughts about IDEs. In my neighborhood, it is great entertainment to listen to the passionate discussions over why one pickup truck is better than other. Ford, Chevy, Dodge... which one is the <em>obvious</em> choice is always subjective to the presenter.</p>
+    <p>Eclipse is a very capable environment/application. It has good documentation and support. There are others,also very capable. BlueJ, NetBeans, IntelliJ, to name a few. I have used others, and which is the <em>best</em> is sometimes just preference, sometimes situationally dependent.</p>
+    <p>For simple demonstrations and class files, I usually prefer to use a simple text editor. Yes, there are many of those to choose from also, Notepad++, Sublime, Atom, ... I like to use vi. In fact, I have an alias to Vim (cross platform support) to launch with the 'vi' command. I also like Visual Studio, since it's my current tool of choice for html and Python files.</p>
+    <p>With that said, I will be using Eclipse, starting with Chapter 2 for any demonstrations and for reviewing your code. If it compiles and runs on your computer using Eclipse, then it should run and look the same on mine.</p>
+    <p>&nbsp;</p>
+</div>
+<div id="sample_code">
+    <p>Ready to start?</p>
+    <p>Take some time to tour Eclipse. Practice opening a new project, building it, debugging it, and saving it without worrying about incorrect coding. then try entering (not copy/pasting) these code samples.</p>
+    <p>&nbsp;</p>
+</div>
+<div id="template_code">
+    <p><strong>Important!</strong> Be sure that all of your files contain the following template lines of at the top of each submitted file. You may add additional comments as well, but these must be included first.</p>
+    <pre>        // Your name
+        // Class name
+        // Project description
+
+    </pre>
+    <p>&nbsp;</p>
+</div>
+<div id="Hello.java">
+    <hr />
+    <p>Wouldn't you have been disappointed if it wasn't here?</p>
+    <pre>        // Johnny Developer
+        // Hello
+        // Simple Hello World application
+
+        public class Hello {
+            public static void main(String[] args) {
+                System.out.println("Hello World");
+            }
+        }
+    </pre>
+    <p>&nbsp;</p>
+</div>
+<div id="NameDisplay.java">
+    <hr />
+    <p>Read user inputs from Java dialog boxes</p>
+    <pre>        // Debbie Reid
+        // NameDisplay
+        // Prompt and display name using dialog boxes
+
+        import javax.swing.JOptionPane;
+
+        public class NameDisplay {
+            public static void main(String[] args ) {
+                //variables
+                String firstName; //user input
+                String lastName; //user input
+
+                //get the user's first name
+                firstName = JOptionPane.showInputDialog("What is your first name?");
+
+                //get the user's last name
+                lastName = JOptionPane.showInputDialog("What is your last name?");
+
+                //display a greeting
+                JOptionPane.showMessageDialog(null, "Hello " + firstName + " " + lastName);
+                
+                System.exit(0);
+            }
+        }
+    </pre>
+    <p>&nbsp;</p>
+</div>
+<div id="MilesPerGallon.java">
+    <hr />
+    <p>Console i/o</p>
+    <pre>        // Eddie Van Halen
+        // MilesPerGallon
+        // Chapter 2: Programming Challenge 9: Miles-per-Gallon
+
+        import java.util.Scanner; // Needed for the Scanner class
+
+        public class MilesPerGallon
+        {
+            public static void main(String[] args)
+            {
+                double miles;        // Miles driven
+                double gallons;      // Gallons of fuel
+                double mpg;          // Miles-per-gallon
+                
+                // Create a Scanner object for keyboard input.
+                Scanner keyboard = new Scanner(System.in);
+
+                // Get the miles driven.
+                System.out.print("Enter the miles driven: ");
+                miles = keyboard.nextDouble();
+                
+                // Get the number of gallons of fuel.
+                System.out.print("Enter the gallons of fuel used: ");
+                gallons = keyboard.nextDouble();
+                
+                // Calculate the miles-per-gallon.
+                mpg = miles / gallons;
+                
+                // Display the miles-per-gallon.
+                System.out.printf("The miles-per-gallon is %,.0f", mpg);
+            }
+        }
+    </pre>
+    <p>&nbsp;</p>
+    <div class="ic-flash-info">Reminder: Java file names MUST match the class name!</div>
+</div>
