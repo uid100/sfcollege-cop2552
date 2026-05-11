@@ -1,0 +1,58 @@
+<div id="header">
+    <p style="text-align: center;"><strong>Chapter 3 A First Look at Classes and Objects</strong></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+<div id="reading">
+    <div id="chapter3">
+        <div id="early_objects">
+            <h3>Chapter 3 A First Look at Classes and Objects</h3>
+            <h4 style="text-decoration: underline;">Early Objects</h4>
+            <p>The author, Tony Gaddis, has released multiple variations of his textbooks in this "Getting Started with..." series. Most share content, but there is a significant change in the topic sequence in recent editions, and specifically in our textbook. The title indicates that this edition is an "Early Objects" edition. Many other programming training paths, including some previous versions of this material, prioritize procedural patterns before introducing classes and objects. <em>What do you think of this approach? Is it familiar?</em></p>
+            <p>You have studied and used classes and objects from your very first programming course. You have used classes and objects in C++, C#, and Python, just to name a few. Java is no different. In fact, all programs written in Java use object-oriented principles. This means every program you write will have a class along with objects instantiated from this class.</p>
+            <p>The chapter in the textbook does an excellent job reviewing object-oriented programming and how it applies to the Java programming language. Even if you feel you completely understand OOP, do yourself a huge favor and review over this chapter. It is <u><strong>the basic building block</strong></u> in which the rest of the course will build upon. In addition, we will go further into OOP - that is - inheritance and polymorphism. Both of these require that you are most comfortable with encapsulation - which is the first step in OOP.</p>
+            <p>&nbsp;</p>
+        </div>
+        <div id="encapsulation">
+            <h4 style="text-decoration: underline;">Encapsulation</h4>
+            <p><span style="font-style: italic;"> Did you notice that the main() function is defined within class?</span> Java is a completely object-oriented language.</p>
+            <p>While the concepts of encapsulation are the same in Java as they have been within C++, C#, and Python, the syntax is slightly different as you have likely noticed. Instead of writing:</p>
+            <p><span style="font-family: 'Courier New', Courier, monospace;"> int main()</span> as you did in C++,</p>
+            <p><span style="font-family: 'Courier New', Courier, monospace;"> static void Main()</span> as you did in C# (Visual Studio wrote this for you),</p>
+            <p>you'll notice that Java uses: <span style="font-family: 'Courier New', Courier, monospace;"> public static void main(String[] args)</span></p>
+            <p>again, Java is completely OOP, which is why even main() gets a <span style="color: blue;">public</span> accessor within the class. If you're curious about what the <span style="color: blue;">static</span> keyword is all about, we will go into greater detail when we reach chapter 6. For now, static just means that the variable or method belongs to the class itself - NOT to the object instantiated from the class.</p>
+            <p>&nbsp;</p>
+            <div class="alert alert-info">Since <span style="color: blue;"> main()</span> is where execution begins with each program, it is able to run from within the class without having an object instantiated. The static variable/method is created once in memory and is used throughout the program.</div>
+            <p>&nbsp;</p>
+            <p>There are times when you do not want a separate variable or method to be created for each object. You want the same memory location to be accessed. For a simple example, think of a counter. Perhaps you are counting the number of times a database table was modified. It doesn't matter which object updated the database table, you want to keep a total aggregate count of database updates. In this case, you would consider using a static variable. It has one memory location and every time an object - regardless of which object - updates the database, this static counter would increment.</p>
+            <p>The same holds true for methods. If you have a method that will do the same sequence of instructions for each object instantiated, you may consider using a static method. In this case, <span style="color: blue;"> main()</span> is considered a static method of the class and may execute without being called by an object of the class.</p>
+            <p>&nbsp;</p>
+        </div>
+        <div id="import_packages">
+            <h4 style="text-decoration: underline;">Packages and import Statements</h4>
+            <p>As you learned to add additional components and definitions to your programs:</p>
+            <ul style="margin-left: 10%;">
+                <li><span style="color: blue;"> #include</span> preprocessor statements in C++, and</li>
+                <li><span style="color: blue;"> Using</span> Using preprocessor statements in C#,</li>
+                <li>Similarly, Java uses the <span style="color: blue;"> import</span> statement.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>There are many, manyimport statements within Java. These are additional classes that contain components, definitions, and drivers that will allow your program to function in the manner needed.</p>
+            <p>As with other languages and compilers, Eclipse and the JDK (Java Development Kit) will automatically import the java.lang package which contains some of the basic data types and commands used in Java programs. Your textbook gives you a sample of some of the standard packages used in Java. See Table 3-2 in Chapter 3 in the text.</p>
+            <p>&nbsp;</p>
+        </div>
+        <div id="chapter_headings">
+            <h4 style="text-decoration: underline;">Chapter Headings</h4>
+            <ul style="margin-left: 10%;">
+                <li>Classes</li>
+                <li>More about Passing Arguments</li>
+                <li>Instance Fields and Methods</li>
+                <li>Constructors</li>
+                <li>A BankAccount Class</li>
+                <li>Classes, Variables, and Scope</li>
+                <li>Packages and import Statements</li>
+                <li>Focus on Object Oriented Design: Finding the Classes and their Responsibilities</li>
+            </ul>
+        </div>
+    </div>
+</div>

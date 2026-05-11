@@ -52,7 +52,12 @@
             "02": { 
                 "title": "Chapter 3: A First Look at Classes and Objects",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module2.html"},
+                    "overview": {"title": "Module Overview","type": "content","source": "content/02/module2.html"},
+                    "classes": {"title": "Classes and Objects","type": "content","source": "content/02/classes.html"},
+                    "chapter-notes": {"title": "Chapter Notes","type": "content","source": "content/02/chapter-notes.html"},
+                    "code": {"title": "Code Samples","type": "content","source": "content/02/sample-code.html"},
+                    "ex": {"title": "Exercise: Classes and Objects","type": "content","source": "content/02/ex-classes.html"},
+                    "style": {"title": "Style Guidelines","type": "content","source": "content/02/style.html"},
                     "end": {"title": "End Module 2: Classes and Objects","type": "content","source": "content/end-module.html"}
                 } 
             },

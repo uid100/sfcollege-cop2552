@@ -1,0 +1,175 @@
+<div id="header">
+    <h2>Let's write some code!</h2>
+    <p>&nbsp;</p>
+</div>
+<div id="getting_started">
+    <h3>Keep writing</h3>
+    <p><em>I write code because I enjoy it!</em></p>
+    <p>Yes, sometimes it's frustrating. Sometimes it's difficult. Sometimes we waste time chasing paths that lead in the wrong direction. But sometimes-- sometimes logic and syntax come together efficiently, correctly, and elegantly.</p>
+    <div class="alert alert-success"><em>"Happiness [...] lies in the joy of achievement, in the thrill of creative effort."</em><br />Franklin D. Roosevelt</div>
+    <p>Last week, I encouraged you to use the table of contents to help you stay organized and focused on not only the content, but how it all comes together in the bigger picture.</p>
+    <p>Here's part two. When you read a programming textbook, type and try the examples. Modify them. This will help you understand and retain the information.</p>
+    <p>Many times I've been asked my opinion of which is <em>the best programming language.</em> I propose that the question could be asked better as <em>which is the best for a particular situation or environment or purpose or application?</em> Or better still, <em>is there a best for this situation?</em></p>
+    <p>There are many ways to answer this. Few of them are the simple or straightforward answer that is desired. Environment, resources, objectives all need to be considered. But often it comes down to the Ford/Chevy/Dodge Truck argument.</p>
+    <p>One thing that is consistent is that a developer should learn more than one language just as any professional should have more than one tool and skill. I've also cautioned against learning more than one language at a time. Imagine the confusion of studying French, German, Italian, and Spanish concurrently. Computer programming languages are languages with strict syntax rules and structures. But one of the biggest difficulties is not the differences, but the similarities.</p>
+    <p>&nbsp;</p>
+    <p>Let's write some code.</p>
+</div>
+<hr />
+<div id="template_code">
+    <h4>Reminder:</h4>
+    <p class="alert alert-info"><strong>Important!</strong> Be sure that all of your files contain the following template lines of at the top of each submitted file. You may add additional comments as well, but these must be included first.</p>
+    <pre>// Your name
+// Class name
+// Project description</pre>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<div id="personal_identification">
+    <p><img src="https://courses.sfcollege.edu/courses/498618/files/58017196/preview" alt="PersonalInformation Class Model" width="240" data-api-returntype="File" data-api-endpoint="https://courses.sfcollege.edu/api/v1/courses/498618/files/58017196" /></p>
+    <p>PersonalInformation Class Model</p>
+    <hr />
+    <h4>PersonalInformation.java</h4>
+    <p>fix the headers to match the template!</p>
+    <pre>/**
+ * Chapter 3
+ * Programming Challenge 3: Personal Information Class
+ * The PersonalInformation class stores personal data. 
+ */
+       
+public class PersonalInformation
+{
+    private String name;       // A person's name
+    private int age;           // A person's age
+    private String address;    // A person's address
+    private String phone;      // A person's phone number
+
+    /**
+    * The setName method sets the person's name.
+    */
+
+    public void setName(String n)
+    {
+        name = n;
+    }
+
+    /**
+    * The setAge method sets the person's age.
+    */
+
+    public void setAge(int a)
+    {
+        age = a;
+    }
+
+    /**
+    * The setAddress method sets the person's address.
+    */
+
+    public void setAddress(String a)
+    {
+        address = a;
+    }
+
+    /**
+    * The setPhone method sets the person's phone number.
+    */
+
+    public void setPhone(String p)
+    {
+        phone = p;
+    }
+
+    /**
+    * The getName method returns the person's name.
+    */
+
+    public String getName()
+    {
+        return name;
+    }
+
+    /**
+    * The getAge method returns the person's age.
+    */
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    /**
+    * The getAdress method returns the person's address.
+    */
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    /**
+    * The getPhone method returns the person's phone number.
+    */
+
+    public String getPhone()
+    {
+        return phone;
+    }
+}</pre>
+    <h4>PersonalInfoDemo.java</h4>
+    <p>fix the headers to match the template!</p>
+    <pre>/**
+ * Chapter 3
+ * Programming Challenge 3: Personal Information Class
+ * This program demonstrates the PersonalInformation class. 
+ */
+public class PersonalInfoDemo
+{
+    public static void main(String[] args)
+    {
+        // Create the objects.
+        PersonalInformation myInfo = new PersonalInformation();
+        PersonalInformation myFriend1 = new PersonalInformation();
+        PersonalInformation myFriend2 = new PersonalInformation();
+        
+        // Set my info.
+        myInfo.setName("Joe Mahoney");
+        myInfo.setAge(27);
+        myInfo.setAddress("724 22nd Street");
+        myInfo.setPhone("(555)555-1234");
+
+        // Set friend #1's info.
+        myFriend1.setName("Geri Rose");
+        myFriend1.setAge(24);
+        myFriend1.setAddress("149 East Bay Street");
+        myFriend1.setPhone("(555)555-5678");
+
+        // Set friend #2's info.
+        myFriend2.setName("John Carbonni");
+        myFriend2.setAge(28);
+        myFriend2.setAddress("22 King Street");
+        myFriend2.setPhone("(555)555-0123");
+        
+        // Display my info.
+        System.out.println("My information:");
+        System.out.println("Name: " + myInfo.getName());
+        System.out.println("Age: " + myInfo.getAge());
+        System.out.println("Address: " + myInfo.getAddress());
+        System.out.println("Phone: " + myInfo.getPhone());
+
+        // Display friend #1's info.
+        System.out.println("\nFriend #1's information:");
+        System.out.println("Name: " + myFriend1.getName());
+        System.out.println("Age: " + myFriend1.getAge());
+        System.out.println("Address: " + myFriend1.getAddress());
+        System.out.println("Phone: " + myFriend1.getPhone());
+
+        // Display friend #2's info.
+        System.out.println("\nFriend #2's information:");
+        System.out.println("Name: " + myFriend2.getName());
+        System.out.println("Age: " + myFriend2.getAge());
+        System.out.println("Address: " + myFriend2.getAddress());
+        System.out.println("Phone: " + myFriend2.getPhone());
+    }
+}</pre>
+</div>
