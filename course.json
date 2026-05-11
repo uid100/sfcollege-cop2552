@@ -41,6 +41,7 @@
                 "pages": {
                     "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
                     "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
+                    "intro": {"title": "Discussion: Introductions","type": "content","source": "content/01/intro.html"},
                     "chapter-notes": {"title": "Chapter Notes","type": "content","source": "content/01/chapter-notes.html"},
                     "code": {"title": "Code Demonstrations","type": "content","source": "content/01/sample-code.html"},
                     "ex": {"title": "Exercise: Eclipse and JUnit","type": "content","source": "content/01/ex-eclipse.html"},
