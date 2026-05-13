@@ -65,80 +65,80 @@
             "03": { 
                 "title": "Chapter 4: Decision Structures",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module3.html"},
-                    "ch4": {"title": "Chapter Notes","type": "content","source": "content/ch4.html"},
-                    "sample4": {"title": "Code Samples","type": "content","source": "content/sample-code4.html"},
-                    "ex": {"title": "Exercise: Array Fundamentals","type": "content","source": "content/ex-array-fundamentals.html"},
-                    "end": {"title": "End Module 3: Decision Structures","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/03/module3.html"},
+                    "ch4": {"title": "Chapter Notes","type": "content","source": "content/03/ch4.html"},
+                    "sample4": {"title": "Code Samples","type": "content","source": "content/03/sample-code4.html"},
+                    "ex": {"title": "Exercise: Array Fundamentals","type": "content","source": "content/03/ex-array-fundamentals.html"},
+                    "end": {"title": "End Module 3: Decision Structures","type": "content","source": "content/03/end-module.html"}
                 } 
             },
             "04": { 
                 "title": "Chapter 5: Loops and Files",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module4.html"},
-                    "ch5": {"title": "Chapter Notes","type": "content","source": "content/ch5.html"},
-                    "sample5": {"title": "Code Samples","type": "content","source": "content/sample-code5.html"},
-                    "ex": {"title": "Exercise: 2D Arrays","type": "content","source": "content/ex-2d-arrays.html"},
-                    "end": {"title": "End Module 4: Loops and Files","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/04/module4.html"},
+                    "ch5": {"title": "Chapter Notes","type": "content","source": "content/04/ch5.html"},
+                    "sample5": {"title": "Code Samples","type": "content","source": "content/04/sample-code5.html"},
+                    "ex": {"title": "Exercise: 2D Arrays","type": "content","source": "content/04/ex-2d-arrays.html"},
+                    "end": {"title": "End Module 4: Loops and Files","type": "content","source": "content/04/end-module.html"}
                 } 
             },
             "05": { 
                 "title": "Chapter 6: A Second Look at Classes",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module5.html"},
-                    "ch6": {"title": "Chapter Notes","type": "content","source": "content/ch6.html"},
-                    "sample6": {"title": "Code Samples","type": "content","source": "content/sample-code6.html"},
-                    "ex": {"title": "Exercise: More about Classes","type": "content","source": "content/ex-classes.html"},
-                    "end": {"title": "End Module 5: More about Classes","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/05/module5.html"},
+                    "ch6": {"title": "Chapter Notes","type": "content","source": "content/05/ch6.html"},
+                    "sample6": {"title": "Code Samples","type": "content","source": "content/05/sample-code6.html"},
+                    "ex": {"title": "Exercise: More about Classes","type": "content","source": "content/05/ex-classes.html"},
+                    "end": {"title": "End Module 5: More about Classes","type": "content","source": "content/05/end-module.html"}
                 } 
             },
             "06": { 
                 "title": "Chapter 7&amp;8: Arrays and the ArrayList Class and Text Processing and Wrapper Classes",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module6.html"},
-                    "end": {"title": "End Module 6: Arrays and the ArrayLists, and Text Processing and Wrappers","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/06/module6.html"},
+                    "end": {"title": "End Module 6: Arrays and the ArrayLists, and Text Processing and Wrappers","type": "content","source": "content/06/end-module.html"}
                 } 
             },
             "07": { 
                 "title": "Chapter 9: Inheritance",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module7.html"},
-                    "end": {"title": "End Module 7: Inheritance","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/07/module7.html"},
+                    "end": {"title": "End Module 7: Inheritance","type": "content","source": "content/07/end-module.html"}
                 } 
             },
             "08": { 
                 "title": "Chapter 10: Exceptions and Advanced File I/O",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module8.html"},
-                    "end": {"title": "End Module 8: Exceptions and File I/O","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/08/module8.html"},
+                    "end": {"title": "End Module 8: Exceptions and File I/O","type": "content","source": "content/08/end-module.html"}
                 } 
             },
             "09": { 
                 "title": "Chapter 11: JavaFX: GUI Programming and Basic Controls",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module9.html"},
-                    "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/09/module9.html"},
+                    "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/09/end-module.html"}
                 } 
             },
             "10": { 
                 "title": "Chapter 12: JavaFX: Advanced Controls",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module10.html"},
-                    "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/10/module10.html"},
+                    "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/10/end-module.html"}
                 } 
             },
             "11": { 
                 "title": "Chapter 13: Recursion",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module11.html"},
-                    "end": {"title": "End Module 11: Recursion","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/11/module11.html"},
+                    "end": {"title": "End Module 11: Recursion","type": "content","source": "content/11/end-module.html"}
                 } 
             },
             "12": { 
                 "title": "Chapter 15: Databases",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module12.html"},
-                    "end": {"title": "End Module 12: Databases","type": "content","source": "content/end-module.html"}
+                    "overview": {"title": "Module Overview","type": "content","source": "content/12/module12.html"},
+                    "end": {"title": "End Module 12: Databases","type": "content","source": "content/12/end-module.html"}
                 } 
             },
             "13": { 
