@@ -1,0 +1,252 @@
+<div id="header">
+    <h2>Sample Code</h2>
+    <p>Chapter 6 - A Second Look at Classes and Objects</p>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<div id="cellphone">
+    <h3>CellPhone</h3>
+    <h4>CellPhone.java</h4>
+    <pre>    //represents a cell phone
+
+    public class CellPhone {
+        //Fields
+        private String manufact;	
+        private String model;
+        private float retailPrice;
+        
+        //methods
+        public CellPhone(String man, String mod, float price)
+        {
+            manufact = man;
+            model = mod;
+            retailPrice = price;
+        }
+    
+        /*
+        public void setManufact(String man)
+        {
+            manufact = man;
+        }
+        
+        public void setMod(String mod)
+        {
+            model = mod;
+        }
+        
+        public void setRetailPrice(float price)
+        {
+            retailPrice = price;
+        }
+        */
+        public String getManufac()
+        {
+            return manufact;
+        }
+        
+        public String getModel()
+        {
+            return model;
+        }
+        
+        public float getRetailPrice()
+        {
+            return retailPrice;
+        }
+    }
+    
+</pre>
+    <p>&nbsp;</p>
+    <h4>CellPhoneTest.java</h4>
+    <pre>    import java.util.Scanner;
+
+    public class CellPhoneTest {
+    
+        public static void main(String[] args) {
+            // TODO Auto-generated method stub
+            String testMan;
+            String testMod;
+            float testPrice;
+            
+            Scanner keyboard = new Scanner(System.in);
+            
+            System.out.print("Enter the manufacturer: ");
+            testMan = keyboard.nextLine();
+            
+            System.out.print("Enter the model number: ");
+            testMod = keyboard.nextLine();
+            
+            System.out.print("Enter the price: ");
+            testPrice = keyboard.nextFloat();
+            
+            keyboard.close();
+            
+            CellPhone phone = new CellPhone(testMan, testMod, testPrice);
+            
+            System.out.println();
+            System.out.println("here is the data provided: ");
+            System.out.println("Manufacturer = " + phone.getManufac());
+            System.out.println("Model = " + phone.getModel());
+            System.out.println("Price = " + phone.getRetailPrice());
+            
+            //another way
+            
+    /*		Cellphone phone = new Cellphone();  //no values passed to the constructor
+            
+            //set values in class Cellphone
+            phone.setManufac(testMan);
+            phone.setMod(testMod);
+            phone.setPrice(testPrice);
+            
+            //retrieve values of class Cellphone variables
+            System.out.println("Manufacturer = " + phone.setManufac());
+            System.out.println("Model = " + phone.setModel());
+            System.out.println("Price = " + phone.setPrice());
+                    
+            
+    */		
+    
+        }
+    
+    }
+    
+</pre>
+</div>
+<hr />
+<div id="Inventory">
+    <h3>Inventory</h3>
+    <img 
+        style="margin-left: auto; margin-right: auto;" 
+        src="https://uid100.github.io/sfcollege-cop2552/images/InventoryItem-Class-UML.png" 
+        alt="Inventory Item class diagram" width="250" />
+    <h4>InventoryItem.java</h4>
+    <pre>    /**
+ * Chapter 6
+ * Programming Challenge 2: InventoryItem Class Copy Constructor.
+ * This version of the InventoryItem class has has a copy constructor.
+ */
+
+public class InventoryItem
+{
+   private String description;  // Item description
+   private int units;           // Units on-hand
+
+   /**
+    * No-arg constructor
+    */
+
+   public InventoryItem()
+   {
+      description = "";
+      units = 0;
+   }
+
+   /**
+    * Copy constructor
+    */
+
+   public InventoryItem(InventoryItem obj)
+   {
+      description = obj.description;
+      units = obj.units;
+   }
+
+   /**
+    * The following constructor accepts a
+    * String argument which is assigned to the
+    * description field.
+    */
+
+   public InventoryItem(String d)
+   {
+      description = d;
+      units = 0;
+   }
+
+   /**
+    * The following constructor accepts a
+    * String argument which is assigned to the
+    * description field, and an int argument
+    * which is assigned to the units field.
+    */
+
+   public InventoryItem(String d, int u)
+   {
+      description = d;
+      units = u;
+   }
+
+   /**
+    * The setDescription method assigns its
+    * argument to the description field.
+    */
+   
+   public void setDescription(String d)
+   {
+      description = d;
+   }
+
+   /**
+    * The setUnits method assigns its argument
+    * to the units field.
+    */
+
+   public void setUnits(int u)
+   {
+      units = u;
+   }
+
+   /**
+    * The getDescription method returns the
+    * value in the description field.
+    */
+
+   public String getDescription()
+   {
+      return description;
+   }
+
+   /**
+    * The getUnits method returns the value in
+    * the units field.
+    */
+
+   public int getUnits()
+   {
+      return units;
+   }
+}
+
+</pre>
+    <p>&nbsp;</p>
+    <h4>InventoryDemo.java</h4>
+    <pre>    /**
+    * Chapter 6
+    * Programming Challenge 2: InventoryItem Class Copy Constructor.
+    * This program demonstrates the InventoryItem class' copy constructor.
+    */
+   
+   public class InventoryDemo
+   {
+      public static void main(String[] args)
+      {
+         // Instantiate an InventoryItem object.
+         InventoryItem item1 = new InventoryItem("Hammer", 20);
+         System.out.println("Item 1:");
+         System.out.println("Description: "
+                            + item1.getDescription());
+         System.out.println("Units: " + item1.getUnits());
+   
+         // Instantiate another InventoryItem object and
+         // use the copy constructor.
+         InventoryItem item2 = new InventoryItem(item1);
+         System.out.println("\nItem 2:");
+         System.out.println("Description: "
+                            + item2.getDescription());
+         System.out.println("Units: " + item2.getUnits());
+   
+      }
+   }
+   
+</pre>
+</div>

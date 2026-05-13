@@ -1,0 +1,136 @@
+<div id="header">
+    <h2>Let's write some code!</h2>
+    <p>There is value in reading, writing, studying, learning, modifying sample code.</p>
+    <p>When I have time (<em>it happens</em>), I like to go to CodeWars.com. There are some 
+        fun coding challenges for just about any language that you are trying to learn. The 
+        benefits are not just solving a challenge, but then comparing your solution with 
+        other (tested) solutions and gaining new ideas and insights and approaches and 
+        learning from them.</p>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<div id="template_code">
+    <h3>Reminder:</h3>
+    <p><strong>Important!</strong> Be sure that all of your files 
+        contain the following template lines of at the top of each submitted file. You 
+        may add additional comments as well, but these must be included first.</p>
+    <pre>        // Your name
+        // Class name
+        // Project description
+
+    </pre>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<h4>PenniesForPay.java</h4>
+<p>fix the headers to match the template!</p>
+<pre>import java.util.Scanner;
+import java.text.DecimalFormat;
+
+/**
+    * Chapter 5
+    * Programming Challenge 4: Pennies for Pay
+    */
+
+public class PenniesForPay
+{
+    public static void main(String[] args)
+    {
+        int pennies;      // Penny accumulator
+        int totalPay;     // Total pay accumulator
+        int maxDays;      // Max number of days
+        int day;          // Day counter
+
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+    
+        // Get the maximum number of days.
+        System.out.print("For how many days will " +
+                        "you work? ");
+        maxDays = keyboard.nextInt();
+    
+        // Validate the input.
+        while (maxDays &lt; 1)
+        {
+            System.out.print("The number of days " +
+                            "must be at least 1.\n" +
+                            "Enter the number of days: ");
+            maxDays = keyboard.nextInt();
+        }
+    
+        // Initialize the day counter to day 1.
+        day = 1;
+    
+        // Initialize the penny accumulator for
+        // the first day at work.
+        pennies = 1;
+        
+        // Initialize the total pay accumulator.
+        totalPay = 0;
+    
+        // Display the report header.
+        System.out.println("Day\t\tPennies Earned");
+    
+        // Display the income report.
+        while (day &lt;= maxDays)
+        {
+            // Display the day number and pennies earned.
+            System.out.println(day + "\t\t" + pennies);
+            
+            // Accumulate the total pay.
+            totalPay += pennies;
+            
+            // Increment for the next day.
+            day++;
+            
+            // Double the number of pennies.
+            pennies *= 2;
+        }
+    
+        // Create a DecimalFormat object to format output.
+        DecimalFormat dollar = new DecimalFormat("#,##0.00");
+    
+        // Display the total pay.
+        System.out.println("Total pay: $" +
+                            dollar.format(totalPay / 100.0));
+    }
+}    </pre>
+<p>&nbsp;</p>
+<hr />
+<h4>ReadWriteFile.java</h4>
+<pre>//Best to import exactly what is needed instead of the entire library - for security purposes
+//import java.io.*; - this would import everything we need plus lots of what we don't need.
+
+import java.util.Scanner;
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.IOException;
+
+
+public class ReadWriteFile {
+
+    public static void main(String[] args) throws IOException  {
+        PrintWriter outputFile = new PrintWriter("Original.txt");  //Note this will overwrite the file if it already exists.
+        outputFile.println("Value 1");
+        outputFile.println("Value 2");
+        outputFile.println("Value 3");
+        outputFile.close(); 
+        outputFile = new PrintWriter("Duplicate.txt");
+        
+
+        // Open the file.
+        File file = new File("Original.txt");
+        Scanner inputFile = new Scanner(file);
+        // Read until the end of the file.
+        while (inputFile.hasNext())
+        {
+            String str = inputFile.nextLine();
+            outputFile.println(str);
+        }
+        inputFile.close();// close the file when done.
+        outputFile.close(); 
+    }
+
+}
+    
+</pre>

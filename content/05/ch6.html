@@ -1,0 +1,94 @@
+<div id="chapter5">
+    <h3>Chapter 6 A Second Look at Classes and Objects</h3>
+    <p>&nbsp;</p>
+    <div id="encapsulation">
+        <p>We are now ready to dive deeper into <strong>encapsulation</strong> and how classes and objects behave beyond the basic use that we have used previously.</p>
+        <p>Earlier, we had a brief introduction to classes and objects in the Java programming language. You have learned that classes and objects in Java behave as they do in other C-based languages.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">Static Class Members</h4>
+        <p>This chapter begins with the <span style="font-family: 'Courier New', Courier, monospace; color: blue;"> static</span> keyword for class members and what this means. You learned previously that when the keyword <span style="font-family: 'Courier New', Courier, monospace; color: blue;"> static</span> is applied to a variable or method, this entity belongs to the class, not the object, or a particular instance of the class.</p>
+        <p>&nbsp;</p>
+        <p>Static variables and methods are defined and have one memory location that may be accessed by <em>any</em>&gt; object of that class.</p>
+        <p>&nbsp;</p>
+        <p>If a <strong>variable </strong> is declared as static and given an initial value, the initialization of that variable only happens once. For example:</p>
+        <pre>private static String CoName = "Best Development Company";
+</pre>
+        <p>&nbsp;</p>
+        <p>When the program initially executes, the variable CoName is initially defined as "Best Development Company" and will not initialize again, regardless of the number of objects instantiated.</p>
+        <p>Program 6-1 in the textbook shows a similar use of static variables and how to increment and use a static variable throughout the program.</p>
+        <p>&nbsp;</p>
+        <p>If a <strong>method</strong> is declared as static, it is independent of the object instances. For example, if a program was calculating weight and the user entered the number of tons and wanted the exact value in pounds, a static method would be appropriate.</p>
+        <pre>private static double tonsToPounds(double numTons)
+{
+    return numTons * 2000;
+}
+</pre>
+        <p>This method may be called when the user enters the number of tons. It may be called from any object instantiated from the class.</p>
+        <p>&nbsp;</p>
+        <p>Another example:</p>
+        <pre>private static void displayName()
+{
+    System.out.println("Best Development Company");
+    System.out.println("All of your development needs resolved!");
+}
+</pre>
+        <p>This method may be called from any object that needs to display the company title and slogan on each printout of information.</p>
+        <p>Program 6-3 in the textbook is a good example that demonstrates the use of static methods and how to call and use them appropriately.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">Overloaded Methods</h4>
+        <p>As we progress through the last two components of object-oriented programming - inheritance and polymorphism - you will likely see and use overloaded methods.</p>
+        <p>Put simply, an overloaded method is a method that has the same name as another method. However, something must differ. Either the return type is different and/or the data types and/or the number of parameters differ.</p>
+        <p>Overloaded methods are used often. Especially if something of a similar nature is needed, but perhaps different data types will be used. For example, to calculate area, you may want to square an input number, you may write a method to calculate the area of different spheres. Perhaps you want to find the area of a circle and the area of a triangle. The calculations for each sphere is different, but you can use overloaded methods:</p>
+        <pre>//calculate and return the area of a circle
+private static double getArea(double radius)
+{
+        return radius * 3.14159;
+}
+
+//calculate and return the area of a triangle
+private static double getArea(double height, double base)
+{
+        return ((height * base) * .5);
+}
+</pre>
+        <p>You'll notice that the two methods above have the same return type and the same method name. The difference here is that when calculating the area of a circle, only one parameter is passed. To calculate the area of a triangle, two parameters are passed. This is how the system will know which method to execute when called; by the number of parameters and the corresponding data types in the parameter list.</p>
+        <p>This is called the method signature.</p>
+        <ul>
+            <li>getArea(double)</li>
+            <li>getArea(double,double)</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Although the two methods have the same name, their signatures are different and execution is not ambiguous.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">Overloaded Methods</h4>
+        <p>The rest of this chapter is filled with different concepts that you may find helpful in your career in program development. Take the time to read through the contents of this chapter.</p>
+        <ul>Some important concepts:
+            <li>Passing and returning objects between methods</li>
+            <li>Aggregation</li>
+            <li>The <em>this</em> reference variable (widely used)</li>
+            <li>Enumerated types</li>
+            <li>Garbage collection<br />(review how this works. This is a common interview-type question to see if you understand what is going on)</li>
+        </ul>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;">Chapter Headings</h4>
+        <ul style="margin-left: 10%;">
+            <li>Static Class Members</li>
+            <li>Overloaded Methods</li>
+            <li>Overloaded Constructors</li>
+            <li>Passing Objects as Arguments to Methods</li>
+            <li>Returning Objects from Methods</li>
+            <li>The toString method</li>
+            <li>Writing an equals method</li>
+            <li>Methods that copy objects</li>
+            <li>Aggregation</li>
+            <li>The this Reference Variable</li>
+            <li>Inner Classes</li>
+            <li>Enumerated types</li>
+            <li>Garbage Collection</li>
+            <li>Object collaboration</li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+</div>

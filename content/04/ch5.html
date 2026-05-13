@@ -1,0 +1,126 @@
+<div id="chapter5">
+    <h3>Chapter 5 Loops and Files</h3>
+    <p>&nbsp;</p>
+    <div id="loops">
+        <h4 style="text-decoration: underline;">Conditional Execution Statements</h4>
+        <p>By now, I'm sure it comes as no surprise that there are a lot of similarities between Java and the other C-based languages you have learned. Guess what? Loops are no different!</p>
+        <p>The functionality and syntax is exactly the same as you learned in C++ and C#.</p>
+        <p>&nbsp;</p>
+        <p>Java:</p>
+        <div class="col-xs-12 col-sm-10 col-md-9 col-lg-8" style="margin-left: 5%;">
+            <table style="margin-left: auto; margin-right: auto;" width="90%">
+                <caption>loop structures</caption>
+                <colgroup span="2" width="40%"></colgroup>
+                <tbody>
+                    <tr valign="top">
+                        <th scope="row"><span style="color: blue;">while</span> loop:</th>
+                        <td>
+                            <pre>while ( a &lt; b )
+{
+    // loop contents
+} </pre>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><span style="color: blue;">do-while</span> loop:</th>
+                        <td>
+                            <pre>do
+{
+    // loop contents
+}  while ( a &lt; b ); </pre>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><span style="color: blue;">for</span> loop:</th>
+                        <td>
+                            <pre>for ( int a = 0; a &lt; b; a++ )
+{
+    // loop contents
+} </pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    <div id="files">
+        <h4 style="text-decoration: underline;">File I/O</h4>
+        <p>The concept of file maintenance remains the same in Java.</p>
+        <ul>
+            <li>You must open the file before you may read from or write to the file.</li>
+            <li>You must test if the file opened properly.</li>
+            <li>After the program has completed its use for the file, the file must be closed.</li>
+        </ul>
+        <p>That said, there are a few syntax differences of which to be aware:</p>
+        <ul>
+            <li>add:
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>import java.io.*;           // needed for file use
+import java.util.scanner;   // needed for input file</pre>
+                </div>
+            </li>
+            <li>to <span style="color: green;">write to an output file</span>, you must create an object of the PrintWriter class. (Similar to the <strong>StreamWriter</strong> class in C#)
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>PrintWriter outputFile = new PrintWriter("filename.ext");</pre>
+                </div>
+            </li>
+            <li>to <span style="color: green;">write a line to the output file</span>,
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>outputFile.println("Hello");</pre>
+                </div>
+            </li>
+            <li>to <span style="color: green;">read from an input file</span>, the program will use the Scanner class as used with the keyboard input, but instead of <span style="color: blue;">Scanner(System.in) </span>, the program will place the file name in the argument list:
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>Scanner inputFile = new Scaner("filename.ext");</pre>
+                </div>
+            </li>
+            <li>to read the next line from the input file:
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>String line = inputFile.nextLine();   // contents of the line of input will
+                                      // be stored in the variable: line
+</pre>
+                </div>
+            </li>
+            <li>to <span style="color: green;">read to EOF</span> (end of file):
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>while (inputFile.hasNext());   // returns true if more data
+                               // exists in the input file
+</pre>
+                </div>
+            </li>
+            <li>to <span style="color: green;">test if a file was opened properly</span>: (end of file):
+                <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8" style="margin-left: 5%;">
+                    <pre>File file = new file(filename);
+if (!file.exists())
+{
+    System.out.println("Error: file not open");
+    System.exit(0);
+}
+</pre>
+                </div>
+            </li>
+        </ul>
+        <p>&nbsp;</p>
+        <div class="alert">
+            <p>Be aware that if the program uses the PrintWriter to open a file that already exists, <strong>the contents of the file will be deleted</strong>.</p>
+            <p>It's always a good idea to check if the file exists before opening the file. If it does exist, the program should prompt the user that the file will be overwritten and allow the user to exit or give a different filename without throwing an exception.</p>
+        </div>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;">Chapter Headings</h4>
+        <ul style="margin-left: 10%;">
+            <li>The Increment and Decrement Operators</li>
+            <li>The while Loop</li>
+            <li>Using the while Loop for Input Validation</li>
+            <li>The do-while Loop</li>
+            <li>The for Loop</li>
+            <li>Running Totals and Sentinel Values</li>
+            <li>Nested Loops</li>
+            <li>The break and continue Statements</li>
+            <li>Deciding Which Loop to Use</li>
+            <li>Introduction to File Input and Output</li>
+        </ul>
+    </div>
+</div>
