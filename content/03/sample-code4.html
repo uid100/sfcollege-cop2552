@@ -1,0 +1,72 @@
+<h2>Sample Code</h2>
+<div id="template_code">
+    <h3>Reminder:</h3>
+    <p>
+      <strong>Important!</strong> Be sure that all of your files contain the following template 
+      lines of at the top of each submitted file. You may add additional comments as well, but 
+      these must be included first.</p>
+    <pre>        // Your name
+        // Class name
+        // Project description
+
+    </pre>
+    <p>&nbsp;</p>
+    <hr />
+</div>
+<div id="getting_started"></div>
+<h3>Try These</h3>
+<h4>Time Calculator</h4>
+<pre>import javax.swing.JOptionPane;
+
+/**
+ * Chapter 4
+ * Programming Challenge 2: Time Calculator
+ */
+
+public class TimeCalc
+{
+   public static void main(String[] args)
+   {
+      double seconds;   // The number of seconds
+      String input;     // To hold keyboard input
+      
+      // Get the number of seconds.
+      input = JOptionPane.showInputDialog("Enter the number of seconds.");
+      seconds = Double.parseDouble(input);
+      
+      // If seconds is less than 60, that's all we have... just seconds.
+      if (seconds &lt; 60)
+      {
+         JOptionPane.showMessageDialog(null, "That's less than a minute, " +
+                                "an hour, or a day.");
+      }
+      
+      // Display the number of minutes, if any.
+      if (seconds &gt;= 60)
+      {
+         JOptionPane.showMessageDialog(null, "There are " +
+                     (seconds / 60) + " minutes in " + seconds +
+                     " seconds.");
+      }
+      
+      // Display the number of hours, if any.
+      if (seconds &gt;= 3600)
+      {
+         JOptionPane.showMessageDialog(null, "There are " +
+                     (seconds / 3600) + " hours in " + seconds +
+                     " seconds.");
+      }
+
+      // Display the number of days, if any.
+      if (seconds &gt;= 86400)
+      {
+         JOptionPane.showMessageDialog(null, "There are " +
+                     (seconds / 86400) + " days in " + seconds +
+                     " seconds.");
+      }
+      
+      // Exit the applicaton.
+      System.exit(0);
+   }
+}
+    </pre>
