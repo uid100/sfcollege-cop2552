@@ -66,6 +66,9 @@
                 "title": "Chapter 4: Decision Structures",
                 "pages": {
                     "overview": {"title": "Module Overview","type": "content","source": "content/module3.html"},
+                    "ch4": {"title": "Chapter Notes","type": "content","source": "content/ch4.html"},
+                    "sample4": {"title": "Code Samples","type": "content","source": "content/sample4.html"},
+                    "ex": {"title": "Exercise: Array Fundamentals","type": "content","source": "content/ex-array-fundamentals.html"},
                     "end": {"title": "End Module 3: Decision Structures","type": "content","source": "content/end-module.html"}
                 } 
             },
