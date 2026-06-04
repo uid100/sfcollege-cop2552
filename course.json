@@ -112,7 +112,7 @@
                     "overview": {"title": "Module 7","type": "content","source": "content/07/module7.html"},
                     "ch9": {"title": "Chapter 9 Notes","type": "content","source": "content/07/ch9.html"},
                     "sample9": {"title": "Chapter 9 Code Samples","type": "content","source": "content/07/sample-code9.html"},
-                    "ex9": {"title": "Exercise: Inheritance","type": "content","source": "content/07/ex-inheritance.html"},
+                    "ex": {"title": "Exercise: Inheritance","type": "content","source": "content/07/ex-inheritance.html"},
                     "end": {"title": "End Module 7: Inheritance","type": "content","source": "content/end-module.html"}
                 } 
             },
@@ -122,7 +122,7 @@
                     "overview": {"title": "Module 8","type": "content","source": "content/08/module8.html"},
                     "ch10": {"title": "Chapter 10 Notes","type": "content","source": "content/08/ch10.html"},
                     "sample10": {"title": "Chapter 10 Code Samples","type": "content","source": "content/08/sample-code10.html"},
-                    "ex10": {"title": "Exercise: Object-Oriented Design","type": "content","source": "content/08/ex-ood.html"},
+                    "ex": {"title": "Exercise: Object-Oriented Design","type": "content","source": "content/08/ex-ood.html"},
                     "end": {"title": "End Module 8: Exceptions and File I/O","type": "content","source": "content/end-module.html"}
                 } 
             },
@@ -132,7 +132,7 @@
                     "overview": {"title": "Module 9","type": "content","source": "content/09/module9.html"},
                     "ch11": {"title": "Chapter 11 Notes","type": "content","source": "content/09/ch11.html"},
                     "sample11": {"title": "Chapter 11 Code Samples","type": "content","source": "content/09/sample-code11.html"},
-                    "ex11": {"title": "Exercise: Exception Handling","type": "content","source": "content/09/ex-exception-handling.html"},
+                    "ex": {"title": "Exercise: Exception Handling","type": "content","source": "content/09/ex-exception-handling.html"},
                     "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/end-module.html"}
                 } 
             },
@@ -140,7 +140,9 @@
                 "title": "Chapter 12: JavaFX: Advanced Controls",
                 "pages": {
                     "overview": {"title": "Module 10","type": "content","source": "content/10/module10.html"},
-                    
+                    "ch12": {"title": "Chapter 12 Notes","type": "content","source": "content/10/ch12.html"},
+                    "sample12": {"title": "Chapter 12 Code Samples","type": "content","source": "content/10/sample-code12.html"},
+                    "ex": {"title": "Exercise: JavaFX","type": "content","source": "content/10/ex-javafx.html"},
                     "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/end-module.html"}
                 } 
             },
