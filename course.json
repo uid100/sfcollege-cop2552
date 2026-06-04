@@ -40,7 +40,7 @@
                 "title": "Chapter 2: Java Fundamentals",
                 "pages": {
                     "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
-                    "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
+                    "overview": {"title": "Module 1","type": "content","source": "content/01/module1.html"},
                     "intro": {"title": "Discussion: Introductions","type": "content","source": "content/01/intro.html"},
                     "chapter-notes": {"title": "Chapter Notes","type": "content","source": "content/01/chapter-notes.html"},
                     "code": {"title": "Code Demonstrations","type": "content","source": "content/01/sample-code.html"},
@@ -52,7 +52,7 @@
             "02": { 
                 "title": "Chapter 3: A First Look at Classes and Objects",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/02/module2.html"},
+                    "overview": {"title": "Module 2","type": "content","source": "content/02/module2.html"},
                     "classes": {"title": "Classes and Objects","type": "content","source": "content/02/classes.html"},
                     "chapter-notes": {"title": "Chapter Notes","type": "content","source": "content/02/chapter-notes.html"},
                     "code": {"title": "Code Samples","type": "content","source": "content/02/sample-code.html"},
@@ -65,7 +65,7 @@
             "03": { 
                 "title": "Chapter 4: Decision Structures",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/03/module3.html"},
+                    "overview": {"title": "Module 3","type": "content","source": "content/03/module3.html"},
                     "ch4": {"title": "Chapter Notes","type": "content","source": "content/03/ch4.html"},
                     "sample4": {"title": "Code Samples","type": "content","source": "content/03/sample-code4.html"},
                     "ex": {"title": "Exercise: Array Fundamentals","type": "content","source": "content/03/ex-array-fund.html"},
@@ -75,7 +75,7 @@
             "04": { 
                 "title": "Chapter 5: Loops and Files",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/04/module4.html"},
+                    "overview": {"title": "Module 4","type": "content","source": "content/04/module4.html"},
                     "ch5": {"title": "Chapter Notes","type": "content","source": "content/04/ch5.html"},
                     "sample5": {"title": "Code Samples","type": "content","source": "content/04/sample-code5.html"},
                     "ex": {"title": "Exercise: 2D Arrays","type": "content","source": "content/04/ex-2d-arrays.html"},
@@ -85,7 +85,7 @@
             "05": { 
                 "title": "Chapter 6: A Second Look at Classes",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/05/module5.html"},
+                    "overview": {"title": "Module 5","type": "content","source": "content/05/module5.html"},
                     "ch6": {"title": "Chapter Notes","type": "content","source": "content/05/ch6.html"},
                     "sample6": {"title": "Code Samples","type": "content","source": "content/05/sample-code6.html"},
                     "ex": {"title": "Exercise: More about Classes","type": "content","source": "content/05/ex-classes.html"},
@@ -95,56 +95,73 @@
             "06": { 
                 "title": "Chapter 7&amp;8: Arrays and the ArrayList Class and Text Processing and Wrapper Classes",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/06/module6.html"},
+                    "overview": {"title": "Module 6","type": "content","source": "content/06/module6.html"},
+                    "ch7": {"title": "Chapter 7 Notes","type": "content","source": "content/06/ch7.html"},
+                    "ch8": {"title": "Chapter 8 Notes","type": "content","source": "content/06/ch8.html"},
+                    "sample7": {"title": "Chapter 7 Code Samples","type": "content","source": "content/06/sample-code7.html"},
+                    "sample8": {"title": "Chapter 8 Code Samples","type": "content","source": "content/06/sample-code8.html"},
+                    "ex7": {"title": "Exercise: Data Structures","type": "content","source": "content/06/ex-data-structures.html"},
+                    "data-struct": {"title": "Using Data Structures","type": "content","source": "content/06/java-data-structures.html"},
+                    "javadoc": {"title": "javadoc comments","type": "content","source": "content/06/javadoc-comments.html"},
                     "end": {"title": "End Module 6: Arrays and the ArrayLists, and Text Processing and Wrappers","type": "content","source": "content/end-module.html"}
                 } 
             },
             "07": { 
                 "title": "Chapter 9: Inheritance",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/07/module7.html"},
+                    "overview": {"title": "Module 7","type": "content","source": "content/07/module7.html"},
+                    "ch9": {"title": "Chapter 9 Notes","type": "content","source": "content/07/ch9.html"},
+                    "sample9": {"title": "Chapter 9 Code Samples","type": "content","source": "content/07/sample-code9.html"},
+                    "ex9": {"title": "Exercise: Inheritance","type": "content","source": "content/07/ex-inheritance.html"},
                     "end": {"title": "End Module 7: Inheritance","type": "content","source": "content/end-module.html"}
                 } 
             },
             "08": { 
                 "title": "Chapter 10: Exceptions and Advanced File I/O",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/08/module8.html"},
+                    "overview": {"title": "Module 8","type": "content","source": "content/08/module8.html"},
+                    "ch10": {"title": "Chapter 10 Notes","type": "content","source": "content/08/ch10.html"},
+                    "sample10": {"title": "Chapter 10 Code Samples","type": "content","source": "content/08/sample-code10.html"},
+                    "ex10": {"title": "Exercise: Object-Oriented Design","type": "content","source": "content/08/ex-ood.html"},
                     "end": {"title": "End Module 8: Exceptions and File I/O","type": "content","source": "content/end-module.html"}
                 } 
             },
             "09": { 
                 "title": "Chapter 11: JavaFX: GUI Programming and Basic Controls",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/09/module9.html"},
+                    "overview": {"title": "Module 9","type": "content","source": "content/09/module9.html"},
+                    "ch11": {"title": "Chapter 11 Notes","type": "content","source": "content/09/ch11.html"},
+                    "sample11": {"title": "Chapter 11 Code Samples","type": "content","source": "content/09/sample-code11.html"},
+                    "ex11": {"title": "Exercise: Exception Handling","type": "content","source": "content/09/ex-exception-handling.html"},
                     "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/end-module.html"}
                 } 
             },
             "10": { 
                 "title": "Chapter 12: JavaFX: Advanced Controls",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/10/module10.html"},
+                    "overview": {"title": "Module 10","type": "content","source": "content/10/module10.html"},
+                    
                     "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/end-module.html"}
                 } 
             },
             "11": { 
                 "title": "Chapter 13: Recursion",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/11/module11.html"},
+                    "overview": {"title": "Module 11","type": "content","source": "content/11/module11.html"},
                     "end": {"title": "End Module 11: Recursion","type": "content","source": "content/end-module.html"}
                 } 
             },
             "12": { 
                 "title": "Chapter 15: Databases",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/12/module12.html"},
+                    "overview": {"title": "Module 12","type": "content","source": "content/12/module12.html"},
                     "end": {"title": "End Module 12: Databases","type": "content","source": "content/end-module.html"}
                 } 
             },
             "13": { 
                 "title": "Wrap-up and Final Exams",
                 "pages": {
-                    "overview": {"title": "Module Overview","type": "content","source": "content/module13.html"},
+                    "overview": {"title": "Module 13","type": "content","source": "content/13/module13.html"},
                     "end": {"title": "End Module 13: Wrap-up","type": "content","source": "content/end-module.html"}
                 } 
             },

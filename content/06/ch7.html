@@ -1,0 +1,81 @@
+<div id="chapter7">
+    <h3>Chapter 7 Arrays and the ArrayList Class</h3>
+    <p>&nbsp;</p>
+    <div id="ch7">
+        <p>We've now reached our first data structure in Java - <span style="text-decoration: underline;"> the static array</span>. Remember, with static arrays the size of the array may not change once created.</p>
+        <h4 style="text-decoration: underline;">Arrays in Java</h4>
+        <p>The concept of an array is the same in Java as is the other C-based languages you've studied. There is a slight syntax difference.</p>
+        <p>To declare an array of 10 integers, you would write:</p>
+        <pre>                int arrayA[10];                 // in C++</pre>
+        is now:
+        <pre>                int[] arrayA = new int[10];     // in Java</pre>
+        <p>&nbsp;</p>
+        <p>As far as accessing the array elements, updating values within an array, displaying values, sorting and searching arrays, passing arrays to methods, etc... you should feel right at home with arrays in Java. They behave just as they did when you studied arrays in C++ and C#.</p>
+        <h4 style="text-decoration: underline;">Advantages of using Arrays in Java</h4>
+        <p>One nice thing about Java that you did not experience with C++ is that Java will automatically check array boundaries for you. An exception will be thrown if the user (or program) attempts to go outside the array boundaries. C++ will allow you to go beyond array boundaries, but Visual Studio will not allow you to do so.</p>
+        <p>Similar to C#'s <strong>foreach</strong>, Java also has an enhanced <strong>for</strong> loop that works ideally with arrays. For example, if you would like to add the values stored in the elements in an array:</p>
+        <pre>            int sum = 0;
+            for (int num : arrayA)
+                sum += num;</pre>
+        <p>This for loop will iterate as many times as the number of elements within the array arrayA. If arrayA has 10 elements, the for loop will iterate 10 times.</p>
+        <p>Of course, the first iteration will add the contents of the 0 element to the variable sum, the second iteration will add the contents of element 1 to the variable sum, and so on, until all 10 elements have been added to the variable sum.</p>
+        <h4 style="text-decoration: underline;">Arrays of Objects</h4>
+        <p>While the concept of multiple objects instantiated from a single class has been discussed in previous courses, it has been rarely used. It is time to experience this widely used practice.</p>
+        <p>For an array to hold multiple objects, you would simply declare an array of the data type of the class - that is, the class name. Remember, when you create a class, you are creating a new data type.</p>
+        <p>For demonstration purposes, let's keep the class contents small, but this will work even for the largest of classes.</p>
+        <h5><strong>Example:</strong> SuperHero Game</h5>
+        <p>We are writing a game. Say we have a class named <span style="font-family: 'Courier New', Courier, monospace;">SuperHero</span>. The superheros will have a name and a superpower. If you think about it, some superheros have multiple powers so we could have an array to store each power for each superhero! But, for this lesson, we will just assume one power per superhero.There is also much more information that we could store for each superhero (such as human name, gender, weapons, source of power, antithesis supervillian, etc...), but again, let's keep this small.</p>
+        <pre>            public class SuperHero {
+                String superName;
+                String superPower;
+        
+                //class methods here
+            };</pre>
+        <p>Let's say when the game begins, the player is given a choice and will select an imminent disaster. Based on the imminent disaster chosen, we would program the game to select appropriate superheroes and retrieve this data from the database.At this time, we would populate an array of superheros from which the player will select one superhero based on the current need. Meaning, if a supervillian was attempting to blow up the moon, Aquaman may not be an appropriate choice. Likewise, if a supervillian plans on destroying Atlantis under the sea, Batman may not be an appropriate choice.</p>
+        <p>Let's say we will give the player 5 superhero options in which to choose to overcome the imminent disaster. The player may change the superhero throughout the game based on the situation involved for a level.</p>
+        <p>Let's say the player has chosen for the imminent disaster the use of nuclear weapons to destroy a populous city and will store these in an underwater facility.</p>
+        <p>To populate the array, it would look something like this:</p>
+        <pre>                SuperHero[] supers = new SuperHeros[5];</pre>
+        <p>&nbsp;</p>
+        <p>Let's say the superhero information is stored in a database table. (We will soon learn how to connect to a database). We download the information:</p>
+        <ul>
+            <li style="list-style-type: none;">supers[0] would contain superName = Superman and superPower = strength</li>
+            <li style="list-style-type: none;">supers[1] would contain superName = Spiderman and superPower = spidey sense</li>
+            <li style="list-style-type: none;">supers[2] would contain superName = Batman and superPower = genius intellect</li>
+            <li style="list-style-type: none;">supers[3] would contain superName = Aquaman and superPower = underwater ability</li>
+            <li style="list-style-type: none;">supers[4] would contain superName = Flash and superPower = speed</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Now the user is able to select a superhero and begin playing the game.</p>
+        <h4 style="text-decoration: underline;">The ArrayList Class</h4>
+        <p>Just like the List class used in C#, Java has a data structure called the ArrayList. The main difference between an array and an arraylist is an arraylist is able to adjust the size of the list depending on the number of items being stored within it. In a way, an arraylist is a dynamic array in that the size is adjustable.</p>
+        <p>The syntax is very similar to C#:</p>
+        <p>&nbsp;</p>
+        <pre>            List  nameList = new List();                 //C# syntax</pre>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <pre>            ArrayList nameList = new ArrayList();        //Java syntax</pre>
+        <p>&nbsp;</p>
+        <p>Also, <strong>import java.util.ArrayList;</strong> is needed in order to use the ArrayList class in Java.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;"><strong>Chapter 7</strong>Headings</h4>
+        <ul style="margin-left: 10%;">Arrays and the ArrayList Class
+            <li>Introduction to Arrays</li>
+            <li>Processing Array Contents</li>
+            <li>Passing Arrays as Arguments to Methods</li>
+            <li>Some Useful Array Algorithms and Operations</li>
+            <li>Returning Arrays from Methods</li>
+            <li><span style="font-family: 'Courier New', Courier, monospace;">String</span> Arrays</li>
+            <li>Arrays of Objects</li>
+            <li>The Sequential Search Algorithm</li>
+            <li>The Selection Sort and the Binary Search</li>
+            <li>Two-Dimensional Arrays</li>
+            <li>Arrays with Three or More Dimensions</li>
+            <li>Command-Line Arguments</li>
+            <li>The <span style="font-family: 'Courier New', Courier, monospace;">ArrayList</span> Class</li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+</div>

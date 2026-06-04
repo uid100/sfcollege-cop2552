@@ -1,0 +1,128 @@
+<div id="chapter9">
+    <h3>Chapter 9 Inheritance and Polymorphism</h3>
+    <div id="ch9">
+        <h4 style="text-decoration: underline;">Inheritance</h4>
+        <p>We are now ready to embark on the second phase of object-oriented programming: Inheritance. You have been using inheritance all along in other courses and languages - C++, C#, and JavaScript, just to name a few.</p>
+        <p><strong>Inheritance</strong> is the principle that knowledge of a general category can be applied to more specific objects. Specifically, inheritance in Java means you can create classes that derive most of their attributes from existing classes. Inheritance saves you time because you don't have to start from scratch every time you want to create a class. Instead, when you use inheritance to create a class, you expand on an existing class.</p>
+        <p>Objects used in computer programs are easier to understand if you can place them within a hierarchy of inheritance. Suppose you have written several programs with a class named Student. Perhaps the class contains the student name, address, and other pertinent information about the student. You have learned the names of the data fields, and you understand what the various member functions do. If you need to write a program using a new class named FirstYearStudent, the job is easier if FirstYearStudent is inherited from a class named Student. The FirstYearStudent class may require some additional data members and functions ( like an orientation() method ) that other Student objects do not require, but FirstYearStudent also will have the more general Student members with which you are already familiar. You need to master only the new members.</p>
+        <p>The FirstYearStudent class inherits from the Student class, or is derived from it. The Student class is called a <strong>parent class, base class, superclass</strong>, or <strong>ancestor</strong>; the FirstYearStudent class is called a <strong>child class, derived class, subclass</strong>, or <strong>descendant</strong>.</p>
+        <p>In many real-life cases, a derived class might not possess all of its parent's traits. Child class members might not possess all the traits of their parent's class. For example, members of the FirstYearStudent class might require a different display format than members of the Student class. A useful feature of Java inheritance is that the derived class can <strong>override</strong> inappropriate attributes from the parent. When you override a function, you substitute one version of the function for another.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">Understanding the Advantages Provided by Inheritance</h4>
+        <p>One major feature of OOP is its ability to create classes from ones that already exist. Programs in which you derive new classes from existing classes offer several advantages:</p>
+        <ul>
+            <li>You save time because much of the code needed for your class is already written.</li>
+            <li>You save additional time because the existing code has already been tested - it is reliable.</li>
+            <li>You save even more time because you already understand how the base class works, and you can concentrate on the complexity added as a result of your extensions to the class.</li>
+            <li>In a derived class, you can extend and revise a base class without corrupting the existing base class features.</li>
+            <li>If other classes have been derived from the base class, the base class is even more reliable, in that it's more likely that logical errors have already been found and fixed.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h5 style="text-decoration: underline;">Example</h5>
+        <pre>public class Person {
+
+    //class variables
+    private int idNum;
+    private String lastName;
+    private String firstName;
+    
+    //class methods
+    
+    public void setFields(int num, String last, String first)
+    {
+            idNum = num;
+            lastName = last;
+            firstName = first;
+    }
+
+    public void outData()
+    {
+            System.out.println("ID # = " + idNum);
+            System.out.println("Name = " + firstName + ' ' + lastName);
+    }
+
+}</pre>
+        <p>&nbsp;</p>
+        <p>To create a derived class, you include the following elements in the order listed:</p>
+        <ul>
+            <li>keyword <strong>class</strong></li>
+            <li>derived class name</li>
+            <li>the keyword <strong>extends</strong></li>
+            <li>base class name</li>
+        </ul>
+        <p>For our first example, we'll use public inheritance, which is most common.</p>
+        <pre>//inherited class
+
+public class Customer extends Person {
+    
+         private double balanceDue;
+    
+         public void setBalDue(double bal)
+         {
+               balanceDue = bal;
+         }
+
+         public void outputBalDue()
+         {
+              System.out.println("Balance due $" + balanceDue);
+         }
+
+}</pre>
+        <p>Next comes the driver program:</p>
+        <pre>public class CustTest {
+
+    public static void main(String[ ] args)
+    {
+            Customer cust = new Customer();
+
+            // the next two functions are defined in the base class Person
+
+            cust.setFields( 215, "Santinit", "Linda" );
+            cust.outData( );
+
+            // the next two functions are defined in the derived class Customer
+
+            cust.setBalDue( 147.95 );
+            cust.outputBalDue( );
+    }
+}</pre>
+        <p>And now the output:</p>
+        <pre>C:\Users\demo&gt;dir *.java
+Volume in drive C is OS
+Volume Serial Number is E8A5-7CFF
+
+Directory of C:\Users\demo
+
+06/06/2022  05:30 PM               260 Customer.java
+06/06/2022  05:32 PM               381 CustTest.java
+06/06/2022  05:28 PM               409 Person.java
+                3 File(s)          1,050 bytes
+                0 Dir(s)  67,147,526,144 bytes free
+
+C:\Users\demo&gt;javac *.java
+
+C:\Users\demo&gt;java CustTest
+ID # = 215
+Name = Linda Santinit
+Balance due $147.95
+
+C:\Users\demo&gt;  
+</pre>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;"><strong>Chapter 9</strong> Headings</h4>
+        <ul style="margin-left: 10%;">
+            <li>What Is Inheritance?</li>
+            <li>Calling the Superclass Constructor</li>
+            <li>Overriding Superclass Methods</li>
+            <li>Protected Members</li>
+            <li>Classes that Inherit from Subclasses</li>
+            <li>The Object Class</li>
+            <li>Polymorphism</li>
+            <li>Abstract Classes and Abstract Methods</li>
+            <li>Interfaces</li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+</div>

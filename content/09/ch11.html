@@ -1,0 +1,155 @@
+<h2>JavaFX and the Graphical User Interface (GUI)</h2>
+
+<p>
+    As you have likely noticed, the Java platform
+    allows you to create programs and program components that have
+    many different user interfaces
+</p>
+<p>
+    We have learned in a Java console application, the user interface
+    is a command-line interface that displays character input and
+    output.&nbsp; While many platforms have a black screen to indicate
+    a command-line interface, the default for Eclipse is a white
+    background.&nbsp; The color doesn't matter, the fact remains that
+    console applications use a command-line interface.
+</p>
+<p>
+    By contrast, the application may have a graphical user
+    interface (GUI) that is displayed in a window. These windows
+    can also be programmed to display output to a user in a browser
+    window as well - as we will see in the next chapter.
+</p>
+<h3>
+    Using JavaFX
+</h3>
+<p>
+    You have used GUIs in previous programming courses. You have
+    learned and used programmed controls, properties, and
+    events. As in other programming languages, Java has a
+    library that allows the creation of a GUI application called
+    JavaFX. There are also several different GUI libraries and
+    frameworks available, such as AWT and Swing, to name a few.
+</p>
+<p>
+    In JavaFX, the basic <u>controls </u>introduced in this chapter
+    should be familiar to you.
+</p>
+<p>
+    <b>Label </b>control is an object that
+    displays text.
+</p>
+<p>
+    <b>TextField </b>control is an object that
+    displays a text box in which users enter text.
+</p>
+<p>
+    <b>Image </b>control is an object that displays
+    an image.
+</p>
+<p>
+    <b>Button </b>control is an
+    object that displays a command button for users to click to
+    trigger an event.
+</p>
+<p>
+    JavaFX also uses something called <u>stages and scenes</u>.
+</p>
+<p>
+    While you may think immediately of the theater, these are used
+    somewhat similarly. The stage is the form
+    window. The scene is the group of controls placed on the
+    stage.
+</p>
+<p>
+    There is a protocol when you are creating a scene.&nbsp; The
+    program will:
+</p>
+<ol>
+    <li>create the controls that will be used.</li>
+    <li>create a layout container to add the controls that have been created.</li>
+    <li>create a Scene object to add the layout container.</li>
+    <li>add the Scene object to the program stage.</li>
+</ol>
+<p>
+    A program demonstrating these steps will
+    follow.
+</p>
+<h3>Creating a Control</h3>
+<h4>Button Control</h4>
+<p>
+    To create a button control: <code>Button btnCalculate = new
+    Button("Calculate");</code>
+</p>
+<p>
+    This line of code will create a Button object named calcButton
+    that will display the text Calculate. In essence, the Button
+    class constructor is called which will set the name property and
+    text property for this button control.
+</p>
+<h3>Creating a Control</h3>
+
+<h4>Button Control</h4>
+<p>
+    To create a button control:
+    <code>Button btnCalculate = new Button("Calculate");</code>
+</p>
+<p>
+    This line of code will create a Button object named calcButton
+    that will display the text Calculate.&nbsp; In essence, the Button
+    class constructor is called which will set the name property and
+    text property for this button control.
+</p>
+<h4></h4>Label Control</h4>
+<p>
+    A label control is very similar:
+    <code>Label lblDisplay = new Label("Click the Calculate button to see your body mass index");</code>
+</p>
+<p>
+    This line of code will create a Label object named lblDisplay that
+    will display the text above.&nbsp; The Label class constructor is
+    called.
+</p>
+<h4>TextField Control</h4>
+<p>
+    A TextField control:
+    <code>TextField txtHeight = new TextField();</code>
+</p>
+<p>
+    A TextField object is instantiated.
+</p>
+<h4>Image Control</h4>
+<p>
+    An Image control:
+</p>
+<p>
+    <code>Image imgBlackHole = new ImageView("file: blackhole.jpg");
+    ImageView imgBH = new ImageView(imgBlackHole);</code>
+</p>
+<p>
+    An ImageView object is instantiated.
+</p>
+<h3>Layout Containers</h3>
+<p>
+    Layout containers are used to arrange the controls created
+    previously on the form or screen.
+</p>
+<p>
+    There are three containers defined in this chapter:
+</p>
+<ul>
+    <li><b>HBox </b>displays controls in a single horizontal row</li>
+    <li><b>VBox </b>displays controls in a single vertical column</li>
+    <li><b>GridPane </b>displays controls in a grid with both rows and columns</li>
+</ul>
+<p>
+     To place the above controls (Button, Label, and TextField) onto a
+     layout container:
+</p>
+<p>
+     <code>HBox hbox = new HBox(txtHeight, lblDisplay, btnCalculate);
+     Scene scene = new Scene(hbox);</code>
+</p>
+<p>
+     <code>VBox vbox = new VBox(txtHeight, lblDisplay, btnCalculate);
+     Scene scene = new Scene(vbox);</code>
+</p>

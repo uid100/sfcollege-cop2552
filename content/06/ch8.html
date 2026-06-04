@@ -1,0 +1,48 @@
+<div id="chapter8">
+    <h3>Chapter 8 Text Processing and Wrapper Classes</h3>
+    <div id="ch8">
+        <h4 style="text-decoration: underline;">The Character Class</h4>
+        <p>Most of the information presented in this chapter are tools that you have used in previous courses.</p>
+        <p>You should be familiar with the isupper(), isdigit(), etc...commands in C++.<br />Likewise, char.IsDigit(), char.IsLetter(), etc..commands in C#.</p>
+        <p>Java is no different. There are many ways to test if a character is of a certain type, such as:</p>
+        <pre>                Character.isLetter(inChar);
+                Character.isUpperCase(inChar);</pre>
+        <p>&nbsp;</p>
+        <p>There is a nice list of the Character class methods that you may find useful in your textbook in Table 8-1 and Table 8-2.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">String Objects</h4>
+        <p>The textbook does a great job listing some of the more useful String methods regarding substrings. See Table 8-3 - Table 8-7.</p>
+        <p>It is good idea to get familiar with these tools. They can help make your program run more efficiently and elegantly.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">The StringBuilder Class</h4>
+        <p>While not as common as the String class, the StringBuilder class has its advantages. The biggest advantage is that you can change the contents of a StringBuilder object.</p>
+        <p>Remember that String objects are not changeable once the contents have been set. If you are in need of changing the contents of the String object, you may want to consider using a StringBuilder object instead.</p>
+        <p>StringBuilder objects are more efficient than String objects because if you change the contents of a String object, the current String object is destroyed and the system invokes the garbage collection utility. Then a new String object is created with the new contents. With the StringBuilder object, there is no need for a destructor and/or garbage collection.</p>
+        <p>No new memory need be allocated.</p>
+        <p>The contents are simply updated.</p>
+        <p>Be sure to review the StringBuilder constructors and methods in Table 8-8 - Table 8-10.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">Using Tokens in Strings</h4>
+        <p>Using tokens and delimiters is quite common in industry. You have likely used tokens and delimiters if you've imported or exported a file from the internet or site.</p>
+        <p>In Microsoft Excel, you can export your file using a .csv file (comma separated values file) meaning a comma will be the delimiter between the tokens (or the values stored in each cell). Often times, you may choose the delimiter to be used when exporting files. Delimiters are usually special characters that are not found in the data stored within the file.</p>
+        <p>Likewise, if you receive an exported .csv file with a given delimiter, the program importing the file will know what to do with the values between the delimiters.</p>
+        <p>&nbsp;</p>
+        <h4 style="text-decoration: underline;">The Parse Methods</h4>
+        <p>This is a critical topic and is used heavily in industry. While values from webpages and forms may be converted to string values, this may not be appropriate and it's up to the developer to parse the value to its correct data type.</p>
+        <p>Be sure to review Table 8-14. You should be familiar with parsing input values.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;"><strong>Chapter 8</strong>Headings</h4>
+        <ul style="margin-left: 10%;">Text Processing and Wrapper Classes
+            <li>Introduction to Wrapper Classes</li>
+            <li>Character Testing and Conversion with the <span style="font-family: 'Courier New', Courier, monospace;">Character</span> Class</li>
+            <li>More About <span style="font-family: 'Courier New', Courier, monospace;">String</span> Objects</li>
+            <li>The <span style="font-family: 'Courier New', Courier, monospace;">StringBuilder</span> Class</li>
+            <li>Tokenizing Strings</li>
+            <li>Wrapper Classes for the Numeric Data Types</li>
+            <li>Focus on Problem Solving: The <span style="font-family: 'Courier New', Courier, monospace;">TestScoreReader</span> Class</li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+</div>

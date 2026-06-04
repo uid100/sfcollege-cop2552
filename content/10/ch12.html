@@ -1,0 +1,53 @@
+<div id="chapter12">
+    <h3>Chapter 12 JavaFX: Advanced Controls</h3>
+    <p>&nbsp;</p>
+    <p>In the last chapter, we read about placing objects on the display. Next, we'll expand that to include styling, common user controls, and approaches to debugging GUI applications.</p>
+    <p>As you've learned, one of Java's greatest strengths is cross-platform support. There is wide support for the Java run-time which, at least in theory, supports the concept of write-once, run-anywhere. As systems development has advanced, user's expectations have changed. Graphical User Interfaces or GUIs are ubiquitous. We take them for granted. Users have an expectation of how functional elements work. They don't need to taught that a that <em>radio</em> button selectors are round and only one in a group may be selected at a time. Input text box sizes should give hints to what an application is expecting for user inputs, menu selections may be selectable with check-marks, or may cause application behavior change.</p>
+    <p>If you stop and think about it, the GUI design, at-a-glance, and leveraging common behaviors, not only improves product acceptance, but also greatly reduces or even eliminates the need for user training in most cases.</p>
+    <p>&nbsp;</p>
+    <div id="styling">
+        <h4>Styling with CSS</h4>
+        <p>In addition to usability, part of User Experience (UX) design is concerned with product acceptance and even brand recognition.</p>
+        <p>It is not uncommon that products are launched using web applications in the interest of cross-platform support and greater style and design control. It may be easier to maintain a single product base without having to consider the many different hardware and operating system platforms that might be accessing it.</p>
+        <p>This chapter opens up with a discussion about applying CSS styling to the objects and controls placed on the interface. This is the same Cascading Style-Sheets that you've used in web application design and development.</p>
+        <p>This opens up possibilities for writing standalone applications to meet many of the same requirements and objectives that are traditionally left to web applications, without being tethered to a remote server.</p>
+        <p>Read through the examples. Try them. If you have access to multiple system operating systems, consider testing them across those platforms. Do they look the same?</p>
+    </div>
+    <div id="controls">
+        <h4>Using common controls and event handlers</h4>
+        <p>The author introduces and explains some common controls, now with the benefit of customized styles! And explains how to integrate an event handler to respond to user interaction. Buttons, menus, selection boxes, text input... good stuff!</p>
+        <p>Try these out! Think about your software projects. How will these make your work better?</p>
+        <p>Compare the development you've done in the past using differnt IDEs to place and stylize elements in your code. Visual Studio uses a <em>toolbox</em> to enable dragging and dropping items around on your interface. But these are just developer props to create code and disregarding how the code was built, ultimately, the source code itself was still saved somewhere in a text file, which could be edited before it was compiled to something else.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div id="debugging">
+        <h4>Approaches to Debugging</h4>
+        <p>The Eclipse IDE does provide a useful debugging environment, and allows the developer to set breakpoints to step through the code and view the values of different pieces as execution progresses. When you started coding, it was usually pretty simple to just insert a few print() statements throughout your code and <em>watch</em> how the values changed from step to step.</p>
+        <p>This approach has a couple of challenges in a GUI application. First, a console window may not be visible during 'normal' operation, and second, the nature of the object approach and user event handler model means that processing sequence may not be a step-by-step, linear process.</p>
+        <p>Think about these challenges as you read through the chapter. Do the ideas overcome these challenges with debugging a GUI-based application?</p>
+        <p>One approach that I've used for many (many!) years is to define a global static constant near the entry point of my applications to enable simple debugging while I'm developing. In Java, this might look like this:</p>
+        <pre>public static boolean DIAGNOSTIC = true;</pre>
+        <p>&nbsp;</p>
+        <p>Then, in the code where I want to see the progress or value of a variable,</p>
+        <pre>if(App.DIAGNOSTIC) System.out.printf("myMethod(%d)",argValue);</pre>
+        <p>&nbsp;</p>
+        <p>Now if I want to turn all of my diagnostic messages on or off for testing, it's very simple to change only one flag. Also, deleting all of these before final production test, is a simple matter of searching for all of the instances of "DIAGNOSTIC" and deleting those lines.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div id="chapter_headings">
+        <h4 style="text-decoration: underline;">Chapter Headings</h4>
+        <ul style="margin-left: 10%;">
+            <li>Styling JavaFX Applications with CSS</li>
+            <li>RadioButton Controls</li>
+            <li>CheckBox Controls</li>
+            <li>ListView Controls</li>
+            <li>ComboBox Controls</li>
+            <li>Slider Controls</li>
+            <li>TextArea Controls</li>
+            <li>Menus</li>
+            <li>The FileChooser Class</li>
+            <li>Using Console Output to Debug a GUI Application</li>
+        </ul>
+    </div>
+    <p>&nbsp;</p>
+</div>
