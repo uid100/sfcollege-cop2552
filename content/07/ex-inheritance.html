@@ -1,0 +1,148 @@
+
+    <div class="exercise">
+        <div id="page-header" style="margin: 20px;">
+            <h3 style="text-align: center;">Advanced Classes</h3>
+            <p>
+                Inheritance and polymorphism are two important concepts in Java programming that allow for code
+                reusability, flexibility, and extensibility.
+            </p>
+        </div> <!-- #page-header -->
+
+        <div class="accordion" id="exercise-content">
+
+            <div class="accordion-item" id="overview">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-overview"
+                    aria-expanded="false" aria-controls="ex-overview">
+                    <h3>Overview</h3>
+                </button>
+                <div id="ex-overview" class="accordion-collapse collapse show" aria-labelledby="overview"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <div class="markdown markdown-main-panel" dir="ltr">
+                            <p>Assignment Overview</p>
+                            <ul>
+                                <li>
+                                    <strong>Inheritance</strong> allows a new class to inherit the properties and
+                                    methods of an existing class. This can be used to avoid duplicating code and to
+                                    create a hierarchical relationship between classes. For example, we could create a
+                                    <code>Vehicle</code> class that has properties and methods for all vehicles, such as
+                                    <code>getSpeed()</code> and <code>brake()</code>. We could then create more specific
+                                    classes, such as <code>Car</code> and <code>Truck</code>, that inherit from
+                                    <code>Vehicle</code> and add their own unique properties and methods.
+                                </li>
+                                <li>
+                                    <strong>Polymorphism</strong> allows us to have different objects that respond to
+                                    the same message in different ways. This is achieved through method overriding,
+                                    where a subclass can provide its own implementation for a method that is also
+                                    defined in its parent class. For example, the <code>Vehicle</code> class might have
+                                    a method called <code>move()</code>. The <code>Car</code> class could override this
+                                    method to provide its own implementation that describes how a car moves. This allows
+                                    us to write code that is more flexible and extensible, as we don't have to worry
+                                    about the specific type of object that we are working with.
+                                </li>
+                            </ul>
+                            <p>
+                                Inheritance and polymorphism are powerful tools that can be used to improve the quality
+                                and maintainability of Java code. By using these concepts effectively, we can write code
+                                that is more reusable, flexible, and extensible.
+                            </p>
+                            <p>
+                                The goal of this assignment is to expand on your knowledge of writing classes in java by
+                                incorporating inheritance. You will implement several java classes some of which are
+                                connected via the is-a relationship and some via the has-a relationship. As always,
+                                other content such as arrays may show up in this programming assignment. In this
+                                challenge you are going to write code to help a bike shop.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- #overview -->
+
+            <div class="accordion-item" id="setup">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-setup"
+                    aria-expanded="false" aria-controls="ex-setup">
+                    <h3>Setup</h3>
+                </button>
+                <div id="ex-setup" class="accordion-collapse collapse show" aria-labelledby="setup"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <div id="s1" style="display: block;">
+                            <h2>Setting Up Eclipse</h2>
+                            <p>
+                                Be sure to have the latest version of the project from the repository before starting.
+                            </p>
+                            <p>
+                                Get the starter code from: <a href="https://github.com/uid100/JavaAdvClasses"
+                                    target="_blank">
+                                    https://github.com/uid100/JavaAdvClasses</a>
+                            </p>
+                            <ul>
+                                <li>
+                                    Download the code and open it in Eclipse.
+                                </li>
+                                <li style="background-color: yellow; font-weight: bold; font-style: italic;">
+                                    There are more detailed instructions in the README.md file in the GitHub repository.
+                                </li>
+                                <li>
+                                    The test cases are provided in the src folder. You will need to uncomment each test
+                                    case and provide the code for the logic to make the test pass.
+                                </li>
+                            </ul>
+                            <span class="ic-flash-info" style="font-style: italic;">
+                                Don't forget to go back and refactor (clean up) your code after you get it working. This
+                                is a good habit to have.
+                            </span>
+                            <ul>
+                                <li>
+                                    When you are finished, zip the project and submit to assignment page as you did in
+                                    the previous module.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- #setup -->
+
+            <div class="accordion-item" id="layout">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-layout"
+                    aria-expanded="false" aria-controls="ex-layout">
+                    <h3>Layout</h3>
+                </button>
+                <div id="ex-layout" class="accordion-collapse collapse show" aria-labelledby="layout"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <p>
+                            This programming assignment is tested using JUnit testing so the Tester class will help
+                            guide you in finding the relationships between the classes along with this programming
+                            assignment spec. The project comes with a number of files which are a mix of classes,
+                            subclasses, abstract classes, interfaces, and the tester class. There is a lot going on, so
+                            take it one test method at a time
+                        </p>
+                        <ul>
+                            <li>Cycle: Abstract superclass<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unicycle: Subclass of
+                                Cycle<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bicycle:&nbsp; Subclass of
+                                Cycle<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElectricMountainBike: Subclass of Cycle
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Gearable / Movable: Interfaces</li>
+                        </ul>
+                        <p>
+                            Similar to previous programming assignments, you will use the tester
+                            class to guide you in completing this programming assignment along with this programming
+                            assignment guide.
+                        </p>
+                        <ul>
+                            <li>Cycle: Abstract superclass<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unicycle: Subclass of
+                                Cycle<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bicycle:&nbsp; Subclass of
+                                Cycle<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElectricMountainBike: Subclass of Cycle</li>
+                        </ul>
+                        <ul>
+                            <li>Gearable / Movable: Interfaces</li>
+                        </ul>
+                    </div> <!-- .accordion-body -->
+                </div> <!-- #ex-layout -->
+            </div> <!-- .accordion-body -->
+
+        </div> <!-- #exercise-content -->
+    </div> <!-- #exercise -->

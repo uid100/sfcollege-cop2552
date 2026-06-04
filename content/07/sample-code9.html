@@ -1,0 +1,308 @@
+<div id="header">
+    <h2>Sample Code</h2>
+    <p>Chapter 9 - Inheritance</p>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<div id="employee">
+    <h3>Employee and ProductionWorker Classes</h3>
+    <p><img src="Employee Class Model" href="https://uid100.github.io/sfcollege-cop2552/images/employee-class-model.png"
+        alt="Employee Class Model"  width="400"/>Employee Class Model</a></p>
+    <h4>Employee Class</h4>
+    <p>&nbsp;</p>
+    <h4>Employee.java</h4>
+    <pre>/**
+* Chapter 9
+* Programming Challenge 1: Employee and ProductionWorker Classes
+* The Employee class stores data about an employee.
+*/
+
+public class Employee
+{
+    private String name;             // Name
+    private String employeeNumber;   // Employee number
+    private String hireDate;         // Hire date
+    
+    /**
+    * Constructor
+    * Assigns argument values to the fields
+    */
+    
+    public Employee(String n, String num, String date)
+    {
+        name = n;
+        setEmployeeNumber(num);
+        hireDate = date;
+    }
+
+    /**
+    * Constructor
+    * Initializes fields to empty strings
+    */
+    
+    public Employee()
+    {
+        name = "";
+        employeeNumber = "";
+        hireDate = "";
+    }
+    /**
+    * setName method
+    */
+
+    public void setName(String n)
+    {
+        name = n;
+    }
+
+    /**
+    * setEmployeeNumber method
+    */
+
+    public void setEmployeeNumber(String e)
+    {
+        if (isValidEmpNum(e))
+        employeeNumber = e;
+        else
+        employeeNumber = "";
+    }
+
+    /**
+    * setHireDate method
+    */
+
+    public void setHireDate(String h)
+    {
+        hireDate = h;
+    }
+
+    /**
+    * getName method
+    */
+
+    public String getName()
+    {
+        return name;
+    }
+
+    /**
+    * getEmployeeNumber method
+    */
+
+    public String getEmployeeNumber()
+    {
+        return employeeNumber;
+    }
+
+    /**
+    * getHireDate method
+    */
+
+    public String getHireDate()
+    {
+        return hireDate;
+    }
+
+    /**
+    * isValidEmpNum method
+    * This private method returns true if the arg
+    * e references a valid ID number. Othewise it
+    * returns false.
+    */
+
+    private boolean isValidEmpNum(String e)
+    {
+        boolean status = true;
+        
+        if (e.length() != 5)
+        status = false;
+        else
+        {
+        if ((!Character.isDigit(e.charAt(0))) ||
+            (!Character.isDigit(e.charAt(1))) ||
+            (!Character.isDigit(e.charAt(2))) ||
+            (e.charAt(3) != '-')              ||
+            (!Character.isLetter(e.charAt(4))))
+                status = false;
+        }
+        
+        return status;
+    }
+
+    /**
+    * toString method
+    */
+
+    public String toString()
+    {
+        String str = "Name: " + name + "\nEmployee Number: ";
+        
+        if (employeeNumber == "")
+        str += "INVALID EMPLOYEE NUMBER";
+        else
+        str += employeeNumber;
+        
+        str += ("\nHire Date: " + hireDate);
+        return str;
+    }
+}
+</pre>
+</div>
+<hr />
+<div id="ProductionWorker">
+    <p>
+        <img src="https://uid100.github.io/sfcollege-cop2552/images/production-worker-class-model.png" 
+        alt="ProductionWorker Class Model" width="400"/>
+    </p>
+    <h4>ProductionWorker Class</h4>
+    <p>&nbsp;</p>
+    <h4>ProductionWorker.java</h4>
+    <pre>import java.text.DecimalFormat;
+
+/**
+    * Chapter 9
+    * Programming Challenge 1: Employee and ProductionWorker Classes
+    * The ProductionWorker class stores data about an employee 
+    * that is a production worker.
+    */
+
+public class ProductionWorker extends Employee
+{
+    // Constants for day and night shifts
+    public static final int DAY_SHIFT = 1;
+    public static final int NIGHT_SHIFT = 2;
+
+    private int shift;      // Worker's shift
+    private double payRate; // Worker's pay rate
+
+    /**
+    * Constructor
+    * Assigns argument values to the fields
+    */
+    
+    public ProductionWorker(String n, String num, String date,
+                            int sh, double rate)
+    {
+        super(n, num, date);
+        shift = sh;
+        payRate = rate;
+    }
+
+    /**
+    * Constructor
+    * Initializes fields to default values
+    */
+    
+    public ProductionWorker()
+    {
+        super();
+        shift = DAY_SHIFT;
+        payRate = 0.0;
+    }
+    
+    /**
+    * setShift method
+    */
+
+    public void setShift(int s)
+    {
+        shift = s;
+    }
+
+    /**
+    * setPayRate method
+    */
+
+    public void setPayRate(double p)
+    {
+        payRate = p;
+    }
+
+    /**
+    * getShift method
+    */
+
+    public int getShift()
+    {
+        return shift;
+    }
+
+    /**
+    * getPayRate method
+    */
+
+    public double getPayRate()
+    {
+        return payRate;
+    }
+    
+    /**
+    * toString method
+    */
+
+    public String toString()
+    {
+        DecimalFormat dollar = new DecimalFormat("#,##0.00");
+        
+        String str = super.toString();
+        
+        str += "\nShift: ";
+        if (shift == DAY_SHIFT)
+            str += "Day";
+        else if (shift == NIGHT_SHIFT)
+            str += "Night";
+        else
+            str += "INVALID SHIFT NUMBER";
+        
+        str += ("\nHourly Pay Rate: $" +
+                dollar.format(payRate));
+                
+        return str;
+    }
+
+}
+    </pre>
+</div>
+<hr />
+<div id="WorkerDemo">
+    <h4>WorkerDemo Driver</h4>
+    <p>&nbsp;</p>
+    <h4>WorkerDemo.java</h4>
+    <pre>/**
+* Chapter 9
+* Programming Challenge 1: Employee and ProductionWorker Classes
+* This program demonstrates the ProductionWorker class.
+*/
+
+public class WorkerDemo
+{
+    public static void main(String[] args)
+    {
+        String shift;
+        
+        // Create a ProductionWorker object and pass the initialization
+        // data to the constructor.
+        ProductionWorker pw =
+            new ProductionWorker("John Smith", "123-A", "11-15-2005",
+                                ProductionWorker.DAY_SHIFT, 16.50);
+        
+        // Display the data.
+        System.out.println("Here's the first production worker.");
+        System.out.println(pw);
+        
+        // Create another ProductionWorker object and use the
+        // set methods.
+        ProductionWorker pw2 = new ProductionWorker();
+        pw2.setName("Joan Jones");
+        pw2.setEmployeeNumber("222-L");
+        pw2.setHireDate("12-12-2005");
+        pw2.setShift(ProductionWorker.NIGHT_SHIFT);
+        pw2.setPayRate(18.50);
+        
+        // Display the data.
+        System.out.println("\nHere's the second production worker.");
+        System.out.println(pw2);
+    }
+}
+        </pre>
+</div>

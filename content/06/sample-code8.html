@@ -1,0 +1,80 @@
+<div id="header">
+    <h2>Sample Code</h2>
+    <p>Chapter 8 - Text Processing and Wrapper Classes</p>
+    <p>&nbsp;</p>
+</div>
+<hr />
+<div id="capitalizer">
+    <h3>Sentence Capitalizer</h3>
+    <h4>SentenceCapitalizer.java</h4>
+    <pre>import java.util.Scanner;
+
+/**
+    * Chapter 8
+    * Programming Challenge 3: Sentence Capitalizer
+    */
+
+public class SentenceCapitalizer
+{
+    public static void main(String[] args)
+    {
+        String input;  // To hold input
+        
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+
+        // Get input.      
+        System.out.print("Enter a string: ");
+        input = keyboard.nextLine();
+        
+        // Display the string with sentence capitalization.
+        System.out.println(sentenceCap(input));
+    }
+    
+    /**
+    * sentenceCap method
+    * This method accepts a String argument
+    * and returns a copy of the argument
+    * with the first letter of each sentence
+    * capitalized.
+    */
+    
+    public static String sentenceCap(String str)
+    {
+        // The variable i will be used to get an index
+        // within a string.
+        int i;
+        
+        // Create a StringBuffer object initialized with
+        // the argument String.
+        StringBuffer temp = new StringBuffer(str);
+        
+        // Capitalize the first letter.
+        if (temp.length() &gt; 0)
+            temp.setCharAt(0, Character.toUpperCase(temp.charAt(0)));
+            
+        // Get the index of the first period followed by a space.
+        i = temp.indexOf(". ");
+        
+        while (i != -1)
+        {
+            // Increment i so it refers to the position of the space.
+            i++;
+            
+            // Find the first character of the next sentence.
+            while (i &lt; temp.length() &amp;&amp; temp.charAt(i) == ' ')
+            i++;
+            
+            // Capitalize the character.
+            temp.setCharAt(i, Character.toUpperCase(temp.charAt(i)));
+            
+            // Get the index of the next period followed by a space.
+            i = temp.indexOf(". ", i);
+        }
+        
+        return temp.toString();
+    }
+}
+    </pre>
+    <p>&nbsp;</p>
+</div>

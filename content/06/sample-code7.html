@@ -1,0 +1,87 @@
+<div id="header">
+    <h2>Sample Code</h2>
+    <p>Chapter 7 - Arrays and the ArrayList Class</p>
+</div>
+<hr />
+<div id="charge_account">
+    <h3>Charge Account Validator</h3>
+    <p>Sequential Search Version</p>
+    <p><img src="https://uid100.github.io/sfcollege-cop2552/images/validator-class-model.png" 
+        alt="Validator Class Model" width="200" /></p>
+    <h4>Validator.java</h4>
+    <pre>/**
+* Chapter 7
+* Programming Challenge 3: Charge Account Validation
+* The Validator class provides a method to 
+* validate account numbers.
+*/
+
+public class Validator
+{
+    // Array of valid numbers
+    private int[] valid = { 5658845, 4520125, 7895122, 8777541, 
+                            8451277, 1302850, 8080152, 4562555,
+                            5552012, 5050552, 7825877, 1250255,
+                            1005231, 6545231, 3852085, 7576651,
+                            7881200, 4581002 };
+    
+    /**
+    * isValid method
+    * This method uses a sequential search to
+    * determine whether the argument appears in
+    * in the array of valid numbers.
+    */
+    
+    public boolean isValid(int number)
+    {
+        boolean found = false;  // Flag
+        int index = 0;          // Array index
+        
+        while (!found &amp;&amp; index &lt; valid.length)
+        {
+        if (valid[index] == number)
+            found = true;
+        else
+            index++;
+        }
+        
+        return found;
+    }
+}
+    </pre>
+    <p>&nbsp;</p>
+    <h4>ValidatorTest.java</h4>
+    <pre>import java.util.Scanner;
+
+/**
+    * Chapter 7
+    * Programming Challenge 3: Charge Account Validation
+    * This program tests the Validator class.
+    */
+
+public class ValidatorTest
+{
+    public static void main(String[] args)
+    {
+        int accountNumber;  // To hold an account number
+        
+        // Create a Scanner object for keyboard input.
+        Scanner keyboard = new Scanner(System.in);
+        
+        // Create a Validator object.
+        Validator val = new Validator();
+        
+        // Get a charge account number.
+        System.out.print("Enter your charge account number: ");
+        accountNumber = keyboard.nextInt();
+        
+        // Determine whether it is valid.
+        if (val.isValid(accountNumber))
+            System.out.println("That's a valid account number.");
+        else
+            System.out.println("That's an INVALID account number.");
+    }
+}
+    </pre>
+</div>
+<hr />
