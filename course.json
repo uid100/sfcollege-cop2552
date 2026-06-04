@@ -100,7 +100,7 @@
                     "ch8": {"title": "Chapter 8 Notes","type": "content","source": "content/06/ch8.html"},
                     "sample7": {"title": "Chapter 7 Code Samples","type": "content","source": "content/06/sample-code7.html"},
                     "sample8": {"title": "Chapter 8 Code Samples","type": "content","source": "content/06/sample-code8.html"},
-                    "ex7": {"title": "Exercise: Data Structures","type": "content","source": "content/06/ex-data-structures.html"},
+                    "ex": {"title": "Exercise: Data Structures","type": "content","source": "content/06/ex-data-structures.html"},
                     "data-structures": {"title": "Using Data Structures","type": "content","source": "content/06/java-data-structures.html"},
                     "javadoc": {"title": "javadoc comments","type": "content","source": "content/06/javadoc-comments.html"},
                     "end": {"title": "End Module 6: Arrays and the ArrayLists, and Text Processing and Wrappers","type": "content","source": "content/end-module.html"}
