@@ -1,0 +1,71 @@
+<h2>Chapter 10 Exception Handling</h2>
+<p>"<em>Please, may I speak to your supervisor?</em>"</p>
+<p>If you have ever had to call a customer service representative, with a problem or concern that they were not able to satisfactorily assist, then you may have either asked to be transferred to a supervisor, or been transferred as a matter of process. You can imagine that if you have a simple request, it will be dispensed with quickly by the first contact, but something more difficult could conceivably be passed to a supervisor's supervisor's supervisor...</p>
+<p>This&nbsp;<em>hand-off </em>process is very similar to how exceptions are handled in your code. If a method call results in an error, and the calling process can handle it, then processing can continue normally, but if not, the <em>unhandled exception </em>is returned to the point that called that method, and if that method doesn't correctly handle it, then the exception gets passed back to the point in code that called it, and so on until it gets back to the application where all this started, and if it's still not <em>handled, </em>then the application exits with an "<strong>unhandled exception</strong>." If the supervisor's supervisor's supervisor's supervisor, wasn't able or refused to assist with your call, then the customer service call ends unhappily.</p>
+<p>&nbsp;</p>
+<p>There are some good examples of this in Chapter 10, and in the chapter notes from the previous page.&nbsp; As you code these, identify&nbsp;<em>where&nbsp;</em>the exception was&nbsp;<em>thrown,</em>&nbsp;Where it was&nbsp;<em>caught,</em> and where it was&nbsp;<em>handled.</em></p>
+<p>&nbsp;</p>
+<h3>SalesReport2&nbsp; (Code Listing 10-6)</h3>
+<p>&nbsp;</p>
+<pre>import java.io.*;
+import java.util.*;
+
+public class SalesReport2 {
+	public static void main(String[] args) {
+		String filename = "SalesData.txt";
+		int months = 0;
+		double oneMonth;
+		double totalSales = 0.0;
+		double averageSales;
+		
+		// Open the data file
+		Scanner inputFile = openFile(filename);
+		
+		// if the file is not open, get another file name from user.
+		while (inputFile == null) {
+			Scanner keyboard = new Scanner(System.in);
+			System.out.print("ERROR: " + filename + "does not exist.\n"
+					+ "Enter another file name: ");
+			filename = keyboard.nextLine();
+			inputFile = openFile(filename);
+		}
+		
+		// process the file
+		while (inputFile.hasNext()) {
+			try {
+				oneMonth = inputFile.nextDouble();
+				totalSales += oneMonth;
+				months++;
+			}
+			catch(InputMismatchException e) {
+				System.out.println("Nonnumeric data encountered in the file: "
+						+ e.getMessage());
+				System.out.println("The invalid record was skipped.");
+				inputFile.nextLine();
+			}
+		}
+		
+		inputFile.close();
+		
+		averageSales = totalSales / months;
+		
+		// display results
+		System.out.printf("Number of months: %d\n", months);
+		System.out.printf("Total Sales: $%,.2f\n", totalSales);
+		System.out.printf("Avergage Sales: $%,.2f\n", averageSales);
+	}
+	
+	// openFile() method opens the file and returns the Scanner object
+	public static Scanner openFile(String filename) {
+		Scanner scan;
+		try {
+			File file = new File(filename);
+			scan = new Scanner(file);
+		}
+		catch(FileNotFoundException e) {
+			scan = null;
+		}
+		return scan;
+	}
+}</pre>
+<pre></pre>
