@@ -46,3 +46,89 @@ public class PowDemo
         </div> <!-- #PowDemoCode -->
     </div>
 
+<p>&nbsp;</p>
+    <div id="sample2">
+        <h3>CoinToss.java</h3>
+        <p>&nbsp;</p>
+        <div id="CoinToss.Code" 
+            style="
+                background-color: #f5f5f5;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 6px;
+                font-family: monospace;
+                overflow-x: auto;
+            ">
+  <pre style="margin: 0;">
+<code>import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+import java.util.Random;
+
+/**
+ *  Coin Toss
+ */
+
+public class CoinToss extends Application
+{
+   public static void main(String[] args)
+   {
+      // Launch the application.
+      launch(args);
+   }
+   
+   @Override
+   public void start(Stage primaryStage)
+   {
+   
+      // Load the coin images.
+      Image headsImage = new Image("Heads1.png");
+      Image tailsImage = new Image("Tails1.png");
+      
+      // Create the ImageView control.
+      ImageView coinImage = new ImageView(headsImage);
+      coinImage.setFitWidth(200);
+      coinImage.setFitHeight(200);
+      
+      // Put everything into a VBox
+      VBox mainVBox = new VBox(coinImage);
+      mainVBox.setAlignment(Pos.CENTER);
+      mainVBox.setPadding(new Insets(10));
+      
+      // Add the main VBox to a scene.
+      Scene scene = new Scene(mainVBox);
+      
+      // Register the event handler.
+      scene.setOnKeyPressed(e ->
+      {
+         // Create a Random object.
+         Random rand = new Random();
+         
+         // Get a random value, 0 or 1.
+         int value = rand.nextInt(2);
+         
+         // Set the coin image.
+         // 0 = "heads" or 1 = "tails"
+         if (value == 0)
+            coinImage.setImage(headsImage);
+         else
+            coinImage.setImage(tailsImage);
+      });
+      
+      // Set the scene to the stage aand display it.
+      primaryStage.setScene(scene);
+      primaryStage.show();
+   }
+}</code></pre>
+      </div> <!-- -->
+      <p>&nbsp;</p>
+      <ul>
+        <li><a href="https://uid100.github.io/sfcollege-cop2552/images/heads1.png" download>heads1.png</a></li>
+        <li><a href="https://uid100.github.io/sfcollege-cop2552/images/tails1.png" download>tails1.png</a></li>
+      </ul>
+   </div>
