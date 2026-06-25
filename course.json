@@ -149,9 +149,12 @@
                 } 
             },
             "11": { 
-                "title": "Chapter 13: Recursion",
+                "title": "Chapter 14: Recursion",
                 "pages": {
                     "overview": {"title": "Module 11","type": "content","source": "content/11/module11.html"},
+                    "ch14": {"title": "Chapter 12 Notes","type": "content","source": "content/11/ch14.html"},
+                    "sample14": {"title": "Chapter 12 Code Samples","type": "content","source": "content/11/sample-code14.html"},
+                    "ex": {"title": "Exercise: Gone Fishing -- GUI App","type": "content","source": "content/11/ex-gui.html"},
                     "end": {"title": "End Module 11: Recursion","type": "content","source": "content/end-module.html"}
                 } 
             },
