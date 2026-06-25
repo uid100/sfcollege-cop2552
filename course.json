@@ -144,7 +144,7 @@
                     "overview": {"title": "Module 10","type": "content","source": "content/10/module10.html"},
                     "ch12": {"title": "Chapter 12 Notes","type": "content","source": "content/10/ch12.html"},
                     "sample12": {"title": "Chapter 12 Code Samples","type": "content","source": "content/10/sample-code12.html"},
-                    "ex": {"title": "Exercise: JavaFX","type": "content","source": "content/10/ex-javafx.html"},
+                    "ex": {"title": "Exercise: File and Stream IO","type": "content","source": "content/10/ex-io.html"},
                     "end": {"title": "End Module 10: JavaFX","type": "content","source": "content/end-module.html"}
                 } 
             },
