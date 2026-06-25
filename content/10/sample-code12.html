@@ -1,0 +1,371 @@
+<h2>Chapter 11 JavaFX</h2>
+<p>&nbsp;</p>
+    <div id="sample1">
+        <h3>ColorAdjuster.java</h3>
+        <p>&nbsp;</p>
+        <div id="ColorAdjusterCode" 
+            style="
+                background-color: #f5f5f5;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 6px;
+                font-family: monospace;
+                overflow-x: auto;
+            ">
+  <pre style="margin: 0;">
+<code>import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+import javafx.scene.control.Slider;
+import javafx.scene.control.Label;
+import javafx.scene.effect.ColorAdjust;
+import javafx.stage.FileChooser;
+import java.io.File;
+
+/**
+ *  Color Adjuster
+ */
+
+public class ColorAdjuster extends Application
+{
+   public static void main(String[] args)
+   {
+      // Launch the application.
+      launch(args);
+   }
+   
+   @Override
+   public void start(Stage primaryStage)
+   {
+      ImageView imageview = new ImageView();
+      
+      // Get an image
+      FileChooser fileChooser = new FileChooser();
+      File selectedFile = fileChooser.showOpenDialog(primaryStage);
+      if (selectedFile != null)
+      {
+         String filename = selectedFile.getPath();
+         imageview.setImage(new Image("file:" + filename));
+      }
+      
+      // Create a ColorAdjust effect object
+      ColorAdjust colorAdjust = new ColorAdjust();
+      imageview.setEffect(colorAdjust);
+      
+      // Slider control for hue
+      Slider hueSlider = new Slider(-10, 10, 0);
+      hueSlider.setShowTickMarks(true);
+      hueSlider.setMajorTickUnit(1);
+      hueSlider.setShowTickLabels(true);
+      Label hueLabel = new Label("Hue");
+      VBox hueVBox = new VBox(10, hueLabel, hueSlider);
+      hueVBox.setAlignment(Pos.CENTER);
+      hueVBox.setPadding(new Insets(10));
+
+      
+      // Register an event handler for the hue Slider.
+      hueSlider.valueProperty().addListener((observeable, oldvalue, newvalue) ->
+      {
+         double value = hueSlider.getValue() * 0.1;
+         colorAdjust.setHue(value);
+      });
+      
+      // Slider control for saturation
+      Slider satSlider = new Slider(-10, 10, 0);
+      satSlider.setShowTickMarks(true);
+      satSlider.setMajorTickUnit(1);
+      satSlider.setShowTickLabels(true);
+      Label satLabel = new Label("Saturation");
+      VBox satVBox = new VBox(10, satLabel, satSlider);
+      satVBox.setAlignment(Pos.CENTER);
+      satVBox.setPadding(new Insets(10));
+      
+      // Register an event handler for the sat Slider.
+      satSlider.valueProperty().addListener((observeable, oldvalue, newvalue) ->
+      {
+         double value = satSlider.getValue() * 0.1;
+         colorAdjust.setSaturation(value);
+      });
+      
+      // Slider control for brightness
+      Slider briSlider = new Slider(-10, 10, 0);
+      briSlider.setShowTickMarks(true);
+      briSlider.setMajorTickUnit(1);
+      briSlider.setShowTickLabels(true);
+      Label briLabel = new Label("Brightness");
+      VBox briVBox = new VBox(10, briLabel, briSlider);
+      briVBox.setAlignment(Pos.CENTER);
+      briVBox.setPadding(new Insets(10));
+      
+      // Register an event handler for the brightness Slider.
+      briSlider.valueProperty().addListener((observeable, oldvalue, newvalue) ->
+      {
+         double value = briSlider.getValue() * 0.1;
+         colorAdjust.setBrightness(value);
+      });
+      
+      // Slider control for contrast
+      Slider conSlider = new Slider(-10, 10, 0);
+      conSlider.setShowTickMarks(true);
+      conSlider.setMajorTickUnit(1);
+      conSlider.setShowTickLabels(true);
+      Label conLabel = new Label("Contrast");
+      VBox conVBox = new VBox(10, conLabel, conSlider);
+      conVBox.setAlignment(Pos.CENTER);
+      conVBox.setPadding(new Insets(10));
+      
+      // Register an event handler for the brightness Slider.
+      conSlider.valueProperty().addListener((observeable, oldvalue, newvalue) ->
+      {
+         double value = conSlider.getValue() * 0.1;
+         colorAdjust.setContrast(value);
+      });
+
+      // Put everything into a VBox
+      VBox mainVBox = new VBox(10, imageview, hueVBox, satVBox, briVBox, conVBox);
+      mainVBox.setAlignment(Pos.CENTER);
+      mainVBox.setPadding(new Insets(10));
+      
+      // Add the main VBox to a scene.
+      Scene scene = new Scene(mainVBox);
+      
+      // Set the scene to the stage aand display it.
+      primaryStage.setScene(scene);
+      primaryStage.show();
+   }
+}</code></pre>
+        </div> <!-- #ColorAdjusterCode -->
+    </div> <!-- #sample1 -->
+
+<p>&nbsp;</p>
+    
+    <div id="sample2">
+        <h3>SolarSystem.java</h3>
+        <p>&nbsp;</p>
+        <div id="SolarSystemCode" 
+            style="
+                background-color: #f5f5f5;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 6px;
+                font-family: monospace;
+                overflow-x: auto;
+            ">
+  <pre style="margin: 0;">
+<code>import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+import javafx.scene.shape.Circle;
+import javafx.scene.paint.Color;
+
+public class SolarSystem extends Application
+{
+   public static void main(String[] args)
+   {
+      launch(args);
+   }
+   
+   @Override
+   public void start(Stage primaryStage)
+   {
+      // Constants for the scene size
+      final double SCENE_WIDTH = 520.0;
+      final double SCENE_HEIGHT = 300.0;
+      
+      // Constants for the drawing.
+      final double SPACING = 10;
+
+      final double SUN_X = 60;
+      final double SUN_Y = 150;
+      final double SUN_RAD = 50;
+      final Color  SUN_COLOR = Color.YELLOW;
+      
+      final double MERC_RAD = 10;
+      final double MERC_X = SUN_X + SUN_RAD + SPACING + MERC_RAD;
+      final double MERC_Y = 150;
+      final Color  MERC_COLOR = Color.ORANGE;
+      
+      final double VENUS_RAD = 15;
+      final double VENUS_X = MERC_X + MERC_RAD + SPACING + VENUS_RAD;
+      final double VENUS_Y = 150;
+      final Color  VENUS_COLOR = Color.LIGHTBLUE;
+      
+      final double EARTH_RAD = 10;
+      final double EARTH_X = VENUS_X + VENUS_RAD + SPACING + EARTH_RAD;
+      final double EARTH_Y = 150;
+      final Color  EARTH_COLOR = Color.BLUE;
+      
+      final double MARS_RAD = 8;
+      final double MARS_X = EARTH_X + EARTH_RAD + SPACING + MARS_RAD;
+      final double MARS_Y = 150;
+      final Color  MARS_COLOR = Color.RED;
+      
+      final double JUPITER_RAD = 30;
+      final double JUPITER_X = MARS_X + MARS_RAD + SPACING + JUPITER_RAD;
+      final double JUPITER_Y = 150;
+      final Color  JUPITER_COLOR = Color.BROWN;
+      
+      final double SAT_RAD = 30;
+      final double SAT_X = JUPITER_X + JUPITER_RAD + SPACING + SAT_RAD;
+      final double SAT_Y = 150;
+      final Color  SAT_COLOR = Color.BLANCHEDALMOND;
+      
+      final double URN_RAD = 20;
+      final double URN_X = SAT_X + SAT_RAD + SPACING + URN_RAD;
+      final double URN_Y = 150;
+      final Color  URN_COLOR = Color.DARKBLUE;
+      
+      final double NEP_RAD = 17;
+      final double NEP_X = URN_X + URN_RAD + SPACING + NEP_RAD;
+      final double NEP_Y = 150;
+      final Color  NEP_COLOR = Color.LIGHTBLUE;
+      
+      final double PLU_RAD = 5;
+      final double PLU_X = NEP_X + NEP_RAD + SPACING + PLU_RAD;
+      final double PLU_Y = 150;
+      final Color  PLU_COLOR = Color.DARKGREEN;
+      
+      // Draw the planets
+      Circle sun = new Circle(SUN_X, SUN_Y, SUN_RAD);
+      sun.setFill(SUN_COLOR);
+      Text suntext = new Text(SUN_X, SUN_Y + SUN_RAD, "Sun");
+      
+      Circle mercury = new Circle(MERC_X, MERC_Y, MERC_RAD);
+      mercury.setFill(MERC_COLOR);
+      Text mercurytext = new Text(MERC_X, MERC_Y + MERC_RAD, "Mercury");
+      
+      Circle venus = new Circle(VENUS_X, VENUS_Y, VENUS_RAD);
+      venus.setFill(VENUS_COLOR);
+      Text venustext = new Text(VENUS_X, VENUS_Y + VENUS_RAD, "Venus");
+      
+      Circle earth = new Circle(EARTH_X, EARTH_Y, EARTH_RAD);
+      earth.setFill(EARTH_COLOR);
+      Text earthtext = new Text(EARTH_X, EARTH_Y + EARTH_RAD, "Earth");
+      
+      Circle mars = new Circle(MARS_X, MARS_Y, MARS_RAD);
+      mars.setFill(MARS_COLOR);
+      Text marstext = new Text(MARS_X, MARS_Y + MARS_RAD, "Mars");
+      
+      Circle jupiter = new Circle(JUPITER_X, JUPITER_Y, JUPITER_RAD);
+      jupiter.setFill(JUPITER_COLOR);
+      Text jupitertext = new Text(JUPITER_X, JUPITER_Y + JUPITER_RAD, "Jupiter");
+      
+      Circle saturn = new Circle(SAT_X, SAT_Y, SAT_RAD);
+      saturn.setFill(SAT_COLOR);
+      Text saturntext = new Text(SAT_X, SAT_Y + SAT_RAD, "Saturn");
+      
+      Circle uranus = new Circle(URN_X, URN_Y, URN_RAD);
+      uranus.setFill(URN_COLOR);
+      Text uranustext = new Text(URN_X, URN_Y + URN_RAD, "Uranus");
+      
+      Circle neptune = new Circle(NEP_X, NEP_Y, NEP_RAD);
+      neptune.setFill(NEP_COLOR);
+      Text neptunetext = new Text(NEP_X, NEP_Y + NEP_RAD, "Neptune");
+      
+      Circle pluto = new Circle(PLU_X, PLU_Y, PLU_RAD);
+      pluto.setFill(PLU_COLOR);
+      Text plutotext = new Text(PLU_X, PLU_Y + PLU_RAD, "Pluto");
+
+      // Add the shapes to a Pane.
+      Pane pane = new Pane(sun, mercury, venus, earth, mars, jupiter,
+                           saturn, uranus, neptune, pluto,
+                           suntext, mercurytext, venustext, earthtext,
+                           marstext, jupitertext,
+                           saturntext, uranustext, neptunetext, plutotext);
+      
+      // Create a Scene and display it.
+      Scene scene = new Scene(pane, SCENE_WIDTH, SCENE_HEIGHT);
+      primaryStage.setScene(scene);
+      primaryStage.show();
+   }
+}</code></pre>
+        </div> <!-- #SolorSystemCode -->
+    </div> <!-- #sample2 -->
+
+<p>&nbsp;</p>
+
+    <div id="sample3">
+        <h3>MouseRollover.java</h3>
+        <p>&nbsp;</p>
+        <div id="MouseRolloverCode"
+            style="
+                background-color: #f5f5f5;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 6px;
+                font-family: monospace;
+                overflow-x: auto;
+            ">
+  <pre style="margin: 0;">
+<code>import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+import javafx.scene.control.Slider;
+import javafx.scene.control.Label;
+import javafx.scene.effect.ColorAdjust;
+import javafx.stage.FileChooser;
+import java.io.File;
+
+/**
+ *  Mouse Rollover
+ */
+
+public class MouseRollover extends Application
+{
+   public static void main(String[] args)
+   {
+      // Launch the application.
+      launch(args);
+   }
+   
+   @Override
+   public void start(Stage primaryStage)
+   {
+      // Load the images
+      Image image1 = new Image("flower_01.jpg");
+      Image image2 = new Image("flower_02.jpg");
+      
+      // Create an ImageView
+      ImageView imageview = new ImageView(image1);
+      
+      // Register event handlers
+      imageview.setOnMouseEntered(event ->
+      {
+         imageview.setImage(image2);
+      });
+      
+      imageview.setOnMouseExited(event ->
+      {
+         imageview.setImage(image1);
+      });
+
+      // Put everything into a VBox
+      VBox mainVBox = new VBox(imageview);
+      mainVBox.setAlignment(Pos.CENTER);
+      mainVBox.setPadding(new Insets(50));
+      
+      // Add the main VBox to a scene.
+      Scene scene = new Scene(mainVBox);
+      
+      // Set the scene to the stage aand display it.
+      primaryStage.setScene(scene);
+      primaryStage.show();
+   }
+}
+</code></pre>
+        </div> <!-- #mouseRolloverCode -->
+        <p><a href="https://uid100.github.io/sfcollege-cop2552/images/flower_01.jpg" download>flower_01.jpg</a></p>
+        <p><a href="https://uid100.github.io/sfcollege-cop2552/images/flower_02.jpg" download>flower_02.jpg</a></p>
+    </div> <!-- #sample3 -->
