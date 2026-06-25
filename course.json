@@ -134,7 +134,7 @@
                     "overview": {"title": "Module 9","type": "content","source": "content/09/module9.html"},
                     "ch11": {"title": "Chapter 11 Notes","type": "content","source": "content/09/ch11.html"},
                     "sample11": {"title": "Chapter 11 Code Samples","type": "content","source": "content/09/sample-code11.html"},
-                    "ex": {"title": "Exercise: Exception Handling","type": "content","source": "content/09/ex-exception-handling.html"},
+                    "ex": {"title": "Exercise: Exception Handling","type": "content","source": "content/09/ex-exceptions.html"},
                     "end": {"title": "End Module 9: GUI Programming","type": "content","source": "content/end-module.html"}
                 } 
             },

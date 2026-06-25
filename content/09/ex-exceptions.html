@@ -1,0 +1,151 @@
+
+    <div class="exercise">
+        <div id="page-header" style="margin: 20px;">
+            <h3 style="text-align: center;">Exception Handling</h3>
+        </div> <!-- #page-header -->
+
+        <h1>Handling Exceptions</h1>
+        <p>
+            Exceptions are events that occur during the execution of a program, disrupting the normal flow of
+            instructions, such as errors or unexpected conditions. Exception handling is the process of responding to
+            these exceptions by catching, managing, and resolving them to prevent program crashes or improper behavior.
+        </p>
+
+        <div class="accordion" id="exercise-content">
+
+            <div class="accordion-item" id="overview">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-overview"
+                    aria-expanded="false" aria-controls="ex-overview">
+                    <h3>Overview</h3>
+                </button>
+                <div id="ex-overview" class="accordion-collapse collapse show" aria-labelledby="overview"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <p>
+                            Java defines special types of errors called exceptions for a number of reasons:
+                        </p>
+                        <ul>
+                            <li>
+                                To separate error handling from program logic. Exceptions allow programmers to write
+                                their code in a more modular and reusable way, by separating the code that detects and
+                                handles errors from the code that performs the main logic of the program. This makes the
+                                code easier to read, understand, and maintain.
+                            </li>
+                            <li>
+                                To provide a robust and consistent way to handle errors. Exceptions provide a standard
+                                way to handle errors, which makes Java code more predictable and reliable. This is
+                                especially important in large and complex applications, where errors can occur in many
+                                different places.
+                            </li>
+                            <li>
+                                To propagate errors up the call stack. Exceptions can be propagated up the call stack,
+                                which allows errors to be handled at the appropriate level. For example, if a method
+                                throws an exception, the calling method can catch the exception and handle it
+                                accordingly. This allows programmers to centralize error handling in certain parts of
+                                the application, making it easier to manage and troubleshoot errors.
+                            </li>
+                            <li>
+                                To provide information about errors. Exceptions contain information about the error,
+                                such as the type of error, the stack trace, and any additional details. This information
+                                can be used to log the error, display a meaningful error message to the user, or take
+                                other corrective action.
+                            </li>
+                        </ul>
+                        <p>
+                            Java defines two types of exceptions: checked exceptions and unchecked exceptions. Checked
+                            exceptions are exceptions that must be explicitly handled by the programmer. Unchecked
+                            exceptions are exceptions that do not need to be explicitly handled by the programmer.
+                        </p>
+                        <p>
+                            Checked exceptions are typically used to handle errors that are beyond the control of the
+                            programmer, such as errors caused by the underlying operating system or hardware. Unchecked
+                            exceptions are typically used to handle errors that are caused by programmer mistakes, such
+                            as null pointer exceptions and array index out of bounds exceptions.
+                        </p>
+                        <p>
+                            Java provides a number of built-in exceptions that can be used to handle common types of
+                            errors, such as arithmetic exceptions, null pointer exceptions, and file not found
+                            exceptions. Programmers can also define their own custom exceptions to handle specific types
+                            of errors that are not covered by the built-in exceptions.
+                        </p>
+                        <p>
+                            Overall, exceptions are a powerful tool that can be used to improve the robustness,
+                            reliability, and maintainability of Java code.
+                        </p>
+
+                        <p>
+                            Here are some specific examples of how exceptions can be used in Java:
+                        </p>
+                        <ul></ul>
+                        <li>
+                            Handling errors caused by user input. If a user enters invalid input, the program can throw
+                            an exception, which can then be handled to display a meaningful error message to the user
+                            and allow them to try again.
+                        </li>
+                        <li>
+                            Handling errors caused by file operations. If a program tries to open a file that does not
+                            exist, the program can throw an exception, which can then be handled to notify the user of
+                            the error and allow them to take corrective action.
+                        </li>
+                        <li>
+                            Handling errors caused by network operations. If a program tries to connect to a network
+                            server that is unavailable, the program can throw an exception, which can then be handled to
+                            retry the connection or notify the user of the error.
+                        </li>
+                        </ul>
+                        <p>
+                            By using exceptions to handle errors, Java programs can become more robust, reliable, and
+                            user-friendly.
+                        </p>
+
+                    </div>
+                </div>
+            </div> <!-- #overview -->
+
+            <div class="accordion-item" id="setup">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-setup"
+                    aria-expanded="false" aria-controls="ex-setup">
+                    <h3>Setup</h3>
+                </button>
+                <div id="ex-setup" class="accordion-collapse collapse show" aria-labelledby="setup"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <div id="s1" style="display: block;">
+                            <h2>Setting Up Eclipse</h2>
+                            <p>
+                                Be sure to have the latest version of the project from the repository before starting.
+                            </p>
+                            <p>
+                                Get the starter code from: <a href="https://github.com/uid100/JavaExceptions"
+                                    target="_blank">
+                                    https://github.com/uid100/JavaExceptions</a>
+                            </p>
+                            <ul>
+                                <li>
+                                    Download the code and open it in Eclipse.
+                                </li>
+                                <li style="background-color: yellow; font-style: italic; font-weight: bold;">There are
+                                    more detailed instructions in the README.md file in the GitHub repository.
+                                </li>
+                                <li>
+                                    The test cases are provided in the src folder. You will need to uncomment each test
+                                    case and provide the code for the logic to make the test pass.
+                                </li>
+                            </ul>
+                            <span class="ic-flash-info" style="font-style: italic;">
+                                Don't forget to go back and refactor (clean up) your code after you get it working. This
+                                is a good habit to have.
+                            </span>
+                            <ul>
+                                <li>
+                                    When you are finished, zip the project and submit to assignment page as you did in
+                                    the previous module.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- #setup -->
+
+        </div> <!-- #exercise-content -->
+    </div> <!-- #exercise -->
