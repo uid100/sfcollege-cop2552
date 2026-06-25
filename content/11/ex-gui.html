@@ -1,0 +1,170 @@
+ <div class="exercise">
+        <div id="page-header" style="margin: 20px;">
+            <h3 style="text-align: center;">GUI - Gone Fishing!</h3>
+        </div> <!-- #page-header -->
+
+        <div class="accordion" id="exercise-content">
+
+            <div class="accordion-item" id="overview">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-overview"
+                    aria-expanded="false" aria-controls="ex-overview">
+                    <h3>Overview</h3>
+                </button>
+                <div id="ex-overview" class="accordion-collapse collapse show" aria-labelledby="overview"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <div class="markdown markdown-main-panel" dir="ltr">
+                            <p>
+                                In this assignment you will implementing a simple fishing game that will have you
+                                explore many of the most common widgets in the Java Swing library. You will also be
+                                asked to consider coding the connection between the GUI and the code behind the scenes
+                                using the model-view-controller software design pattern.
+                            </p>
+                            <p>
+                                This assignment is a little different.
+                            </p>
+                            <p>
+                                In addition to ensuring the unit tests all pass, and be sure that all the User Stories
+                                are implemented.
+                            </p>
+                            <p>
+                                The tested portion of this programming assignment is very short. The majority of the
+                                work will be on creating the GUI and implementing the stories where you will work
+                                directly with the GUI rather than the tester file.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- #overview -->
+
+            <div class="accordion-item" id="user-stories">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#ex-user-stories" aria-expanded="false" aria-controls="ex-user-stories">
+                    <h3>User Stories</h3>
+                </button>
+                <div id="ex-user-stories" class="accordion-collapse collapse show" aria-labelledby="user-stories"
+                    data-bs-parent="#exercise-content">
+                    <div class="accordion-body">
+                        <div class="markdown markdown-main-panel" dir="ltr">
+                            <p>
+                                The user stories for this assignment are as follows:
+                            </p>
+                            <ol>
+                                <li>
+                                    As a computer user, I can see a window with the title "Gone Fishing" so I can see
+                                    what program I am running.
+                                </li>
+                                <li>
+                                    As a computer user, when I click on the X in the top corner of the window, the
+                                    program exits.
+                                </li>
+                                <li>
+                                    As a computer user, I can see instructions in the window.
+                                </li>
+                                <li>
+                                    As a computer user, I can see who programmed the game.
+                                </li>
+                                <li>
+                                    As a computer user, I can see the grid where the game is played. The grid is 6 by 6
+                                    buttons.
+                                </li>
+                                <li>
+                                    As a computer user, when I start the program, I can see all the UI widgets in the
+                                    game.
+                                </li>
+                                <li>
+                                    As a player, I can see how many tries I have left on a slider, so I can see if I am
+                                    winning. I start with 30 tries.
+                                </li>
+                                <li>
+                                    As a player, I can see how many schools of fish are left on a slider, so I can see
+                                    if the fish are winning. The game starts with 10 schools of fish.
+                                </li>
+                                <li>
+                                    When I click on a button in the grid, it shows me if I caught a fish or not, so I
+                                    can see my fishing skills.
+                                </li>
+                                <li>
+                                    I click on a button in the grid, I cannot click on it again, so I cannot cheat.
+                                </li>
+                                <li>
+                                    I click on a button, the number of tries goes down by one.
+                                </li>
+                                <li>
+                                    When I click on a button, and I caught a school of fish, the number of schools of
+                                    fish goes down by one.
+                                </li>
+                                <li>
+                                    If I manage to catch all the fish before I run out of tries, I get a message: "Game
+                                    Over - You Win!" and the program exits.
+                                </li>
+                                <li>
+                                    If I run out of tries before I have caught all the fish, I get a message: "Game Over
+                                    - Fishes Win!" and the program exits.
+                                </li>
+                            </ol>
+                            <p>
+                                The GUI should look like the following:
+                            </p>
+                            <img src="https://raw.githubusercontent.com/uid100/JavaGUI/refs/heads/main/images/GoneFishing_start.png" alt="GUI">
+                        </div>
+                    </div>
+                </div> <!-- #user-stories -->
+
+                <div class="accordion-item" id="setup">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-setup"
+                        aria-expanded="false" aria-controls="ex-setup">
+                        <h3>Setup</h3>
+                    </button>
+                    <div id="ex-setup" class="accordion-collapse collapse show" aria-labelledby="setup"
+                        data-bs-parent="#exercise-content">
+                        <div class="accordion-body">
+                            <div id="s1" style="display: block;">
+                                <h2>Setting Up Eclipse</h2>
+                                <p>
+                                    Be sure to have the latest version of the project from the repository before
+                                    starting.
+                                </p>
+                                <p>
+                                    Get the starter code from: <a href="https://github.com/uid100/JavaGUI"
+                                        target="_blank">
+                                        https://github.com/uid100/JavaGUI</a>
+                                </p>
+                                <ul>
+                                    <li>
+                                        Download the code and open it in Eclipse.
+                                    </li>
+                                    <li>
+                                        There are more detailed instructions in
+                                        the README.md file in the GitHub repository.
+                                    </li>
+                                    <li>
+                                        The test cases are provided in the src folder. You will need to uncomment each
+                                        test
+                                        case and provide the code for the logic to make the test pass.
+                                    </li>
+                                    <li>
+                                        The GUI is provided in the src folder. You will need to provide the code to make
+                                        the
+                                        GUI work as described in the User Stories.
+                                    </li>
+                                </ul>
+                                <span class="ic-flash-info" style="font-style: italic;">
+                                    Don't forget to go back and refactor (clean up) your code after you get it working.
+                                    This
+                                    is a good habit to have.
+                                </span>
+                                <ul>
+                                    <li>
+                                        When you are finished, zip the project and submit to assignment page as you did
+                                        in
+                                        the previous module.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- #setup -->
+
+            </div> <!-- #exercise-content -->
+        </div> <!-- #exercise -->

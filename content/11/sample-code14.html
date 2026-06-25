@@ -1,0 +1,48 @@
+<h2>Chapter 14 recursion</h2>
+<p>&nbsp;</p>
+    <div id="sample1">
+        <h3>Power Demo -- PowDemo.java</h3>
+        <p>&nbsp;</p>
+        <div id="PowDemoCode" 
+            style="
+                background-color: #f5f5f5;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 6px;
+                font-family: monospace;
+                overflow-x: auto;
+            ">
+  <pre style="margin: 0;">
+<code>/**
+ * Chapter 14
+ * Programming Challenge 7: Recursive Power Method
+ */
+
+public class PowDemo
+{
+   public static void main(String[] args)
+   {
+      double x = 2.0, y = 10.0;
+      
+      System.out.println(x + " raised to the power of " + y +
+                         " is " + pow(x, y));
+   }
+   
+   /**
+    * pow method
+    * This method returns the value of x raised to the
+    * power of y.
+    */
+   
+   public static double pow(double x, double y)
+   {
+      if (y > 0)
+         return x * pow(x, y-1);
+      else
+         return 1;
+   }
+}
+</code></pre>
+        </div> <!-- #PowDemoCode -->
+    </div>
+
