@@ -1,0 +1,109 @@
+        <h1>Recursion in Java</h1>
+        <p>
+            Recursion in programming is a technique where a function calls itself to solve a problem. This approach
+            breaks down a complex problem into smaller, more manageable instances of the same problem. A recursive
+            function generally has two parts:
+        </p>
+        <ul>
+            <li>
+                <strong>Base Case</strong> - The condition under which the function stops calling itself, preventing an
+                infinite loop.
+            </li>
+            <li>
+                <strong>Recursive Case</strong> - The function calls itself with modified arguments, progressively
+                moving toward the base case.
+            </li>
+        </ul>
+        <p>
+            Here's an example of a simple recursive function in Java that calculates the factorial of a number:
+        </p>
+        <pre><code>public class Factorial {
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1; // Base case: factorial of 0 is 1
+        } else {
+            return n * factorial(n - 1); // Recursive case: n! = n * (n-1)!
+        }
+    }
+    </code></pre>
+        <p>
+            In this example, the <code>factorial</code> function calculates the factorial of a number <code>n</code> by
+            recursively calling itself with <code>n-1</code> until it reaches the base case where <code>n</code> is 0.
+            The base case returns 1, and the recursive case multiplies <code>n</code> by the factorial of
+            <code>n-1</code>.
+        </p>
+        <p>
+            Recursion can be a powerful tool for solving problems that have a self-similar structure, such as tree
+            traversal, divide-and-conquer algorithms, and mathematical calculations. However, it can also be less
+            efficient than iterative solutions due to the overhead of function calls and memory usage.
+        </p>
+        <h2>When and Why Recursion is Used</h2>
+        <p>
+            Recursion is particularly useful for tasks that can naturally be divided into similar sub-tasks, such as:
+        </p>
+        <ul>
+            <li>
+                <strong>Tree Traversal</strong> - Navigating hierarchical data structures like trees or directories.
+            </li>
+            <li>
+                <strong>Divide-and-Conquer Algorithms</strong> - Algorithms like merge sort, where problems are split
+                and solved recursively.
+            </li>
+            <li>
+                <strong>Problem Solving in Mathematical Domains</strong> - Calculations like factorials, Fibonacci
+                sequences, or combinations.
+            </li>
+        </ul>
+        <p>
+            Recursion simplifies code for problems that have self-similar structure, making it more readable and easier
+            to implement than iterative solutions, although it can be less efficient due to added function call overhead
+            and memory usage.
+        </p>
+
+
+    </div>
+
+
+    <div class="accordion-item" id="setup">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ex-setup"
+            aria-expanded="false" aria-controls="ex-setup">
+            <h3>Setup</h3>
+        </button>
+        <div id="ex-setup" class="accordion-collapse collapse show" aria-labelledby="setup"
+            data-bs-parent="#exercise-content">
+            <div class="accordion-body">
+                <div id="s1" style="display: block;">
+                    <h2>Setting Up Eclipse</h2>
+                    <p>
+                        Be sure to have the latest version of the project from the repository before starting.
+                    </p>
+                    <p>
+                        Get the starter code from: <a href="https://github.com/uid100/JavaRecursion" target="_blank">
+                            https://github.com/uid100/JavaRecursion</a>
+                    </p>
+                    <ul>
+                        <li>
+                            Download the code and open it in Eclipse.
+                        </li>
+                        <li style="background-color: yellow; font-style: italic; font-weight: bold;">There are
+                            more detailed instructions in the README.md file in the GitHub repository.
+                        </li>
+                        <li>
+                            The test cases are provided in the src folder. You will need to uncomment each test
+                            case and provide the code for the logic to make the test pass.
+                        </li>
+                    </ul>
+                    <span class="ic-flash-info" style="font-style: italic;">
+                        Don't forget to go back and refactor (clean up) your code after you get it working. This
+                        is a good habit to have.
+                    </span>
+                    <ul>
+                        <li>
+                            When you are finished, zip the project and submit to assignment page as you did in
+                            the previous module.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- #setup -->
