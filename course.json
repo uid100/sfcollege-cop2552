@@ -163,8 +163,6 @@
                 "pages": {
                     "overview": {"title": "Module 12","type": "content","source": "content/12/module12.html"},
                     "ch15": {"title": "Chapter 15 Notes","type": "content","source": "content/12/ch15.html"},
-                    "sample15": {"title": "Chapter 15 Code Samples","type": "content","source": "content/12/sample-code15.html"},
-                    "jdbc": {"title": "JDBC and Databases","type": "content","source": "content/12/jdbc.html"},
                     "ex": {"title": "Exercise: Recursion","type": "content","source": "content/12/ex-recursion.html"},
                     "end": {"title": "End Module 12: Databases","type": "content","source": "content/end-module.html"}
                 } 
