@@ -18,7 +18,8 @@
       "Content in each module will be augmented by the required textbook, as well as additional content."
     ],
     "prerequisites": "CGS 1821 and COP 2551 with a grade of C or better",
-    "defaultSection": "fa2026",
+    "defaultSection": "sp2027",
+    "*defaultSection": "fa2026",
     "contact": {
         "instructorEmail": "daniel.sullivan@sfcollege.edu",
         "officeHours": {
